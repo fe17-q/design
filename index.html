@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fernando Quijada</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="brew-style" content="side">
+<!-- GoatCounter site code (privacy-friendly, no cookies). Paste the code from your GoatCounter account,
+     for example content="fernando" for fernando.goatcounter.com. Leave empty to turn analytics off. -->
+<meta name="goatcounter" content="">
+<meta name="description" content="Fernando Quijada, product designer and Duke engineer. Case studies built from user research and fast prototypes.">
+<meta property="og:title" content="Fernando Quijada · Product Design Portfolio">
+<meta property="og:description" content="I design for real people, from first interview to working prototype.">
+<meta property="og:image" content="assets/img/process/menu.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M5 9h22l-2 17q-.3 2-2.3 2H9.3Q7.3 28 7 26Z' fill='%233b2416'/%3E%3Cpath d='M5.6 14h20.8l-.4 4H6Z' fill='%23c9a07a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ================= The menu (home) ================= -->
+<div class="view menu-view" id="view-menu">
+  <div class="menu-wrap">
+    <header class="menu-head">
+      <div class="menu-topline">
+        <p class="label">Product design · Duke '27</p>
+        <div class="bar-tools">
+          <button class="counter-switch" type="button" data-counter aria-pressed="false" aria-label="Behind the counter: design notes"><span class="sw-long">Behind the counter</span><span class="sw-short" aria-hidden="true">Notes</span></button>
+          <div class="theme-switch" role="group" aria-label="Color theme">
+            <button type="button" data-set-theme="light" aria-pressed="false">Latte</button>
+            <button type="button" data-set-theme="dark" aria-pressed="false">Espresso</button>
+          </div>
+        </div>
+      </div>
+      <h1 class="menu-name">Fernando <span>Quijada</span></h1>
+      <p class="role">I design for real people, from first interview to working prototype.</p>
+      <div class="menu-quick">
+        <!-- TODO: replace with the product design resume when Fernando sends it (keep the same file name) -->
+        <a class="btn" href="resume/Fernando_Quijada_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        <a class="btn ghost" href="#all">Just browsing? See everything</a>
+      </div>
+      <aside class="counter-note" hidden>
+        <b>Behind the counter</b>
+        A first-time visitor may not want a coffee ritual. "See everything" skips the menu and the animation and puts every section on one page, so a reviewer in a hurry is one tap from the work.
+      </aside>
+    </header>
+
+    <section class="board-card" aria-labelledby="order-h">
+      <div class="board-card-head">
+        <h2 id="order-h">What can I get started for you?</h2>
+        <p class="label">Each drink opens one section</p>
+      </div>
+      <ul class="drinks">
+        <li><a class="drink" href="#about" data-order="about">
+          <span class="drink-icon" data-icon="about"></span>
+          <span class="drink-text"><span class="drink-name">Latte</span><span class="drink-desc">Who I am and how I design</span></span>
+          <span class="drink-dots" aria-hidden="true"></span>
+          <span class="drink-section">About me</span>
+        </a></li>
+        <li><a class="drink" href="#projects" data-order="projects">
+          <span class="drink-icon" data-icon="projects"></span>
+          <span class="drink-text"><span class="drink-name">Cortado</span><span class="drink-desc">Case studies, from research to prototype</span></span>
+          <span class="drink-dots" aria-hidden="true"></span>
+          <span class="drink-section">Projects</span>
+        </a></li>
+        <li><a class="drink" href="#experience" data-order="experience">
+          <span class="drink-icon" data-icon="experience"></span>
+          <span class="drink-text"><span class="drink-name">Cappuccino</span><span class="drink-desc">Roles, teaching, and skills</span></span>
+          <span class="drink-dots" aria-hidden="true"></span>
+          <span class="drink-section">Experience</span>
+        </a></li>
+        <li><a class="drink" href="#interests" data-order="interests">
+          <span class="drink-icon" data-icon="interests"></span>
+          <span class="drink-text"><span class="drink-name">Macchiato</span><span class="drink-desc">Coffee, running, and baking</span></span>
+          <span class="drink-dots" aria-hidden="true"></span>
+          <span class="drink-section">Interests</span>
+        </a></li>
+        <li><a class="drink" href="#connect" data-order="connect">
+          <span class="drink-icon" data-icon="connect"></span>
+          <span class="drink-text"><span class="drink-name">Americano</span><span class="drink-desc">Email, LinkedIn, and resume</span></span>
+          <span class="drink-dots" aria-hidden="true"></span>
+          <span class="drink-section">Let's connect</span>
+        </a></li>
+      </ul>
+    </section>
+
+    <aside class="counter-note" hidden>
+      <b>Behind the counter</b>
+      Each drink names the section it opens, and the line under it says what's inside, so nobody has to guess where the work is. An earlier version described the drinks themselves ("equal parts espresso and steamed milk"). It was accurate coffee, but it didn't help anyone find a case study.
+    </aside>
+
+    <p class="menu-foot">Barista at BSEISU Coffee by day, designer and engineer the rest of the time. Every drink takes about 5 seconds to make, and you can always skip the line.</p>
+  </div>
+</div>
+
+<!-- ================= The order (sections) ================= -->
+<div class="view order-view" id="view-order" hidden>
+  <header class="order-bar">
+    <a class="change-order" href="#menu" aria-label="Change order: back to the menu">← <span class="sw-long">Change order</span><span class="sw-short" aria-hidden="true">Menu</span></a>
+    <div class="bar-tools">
+      <button class="counter-switch" type="button" data-counter aria-pressed="false" aria-label="Behind the counter: design notes"><span class="sw-long">Behind the counter</span><span class="sw-short" aria-hidden="true">Notes</span></button>
+      <div class="theme-switch" role="group" aria-label="Color theme">
+        <button type="button" data-set-theme="light" aria-pressed="false">Latte</button>
+        <button type="button" data-set-theme="dark" aria-pressed="false">Espresso</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="order-main" id="order-main" tabindex="-1">
+    <div class="ready">
+      <p class="label" data-ready-label>Order up</p>
+      <h1 data-ready-title>Your latte is ready!</h1>
+      <p class="ready-sub" data-ready-sub>About me</p>
+      <aside class="counter-note" hidden>
+        <b>Behind the counter</b>
+        The brewing plays only when you order from the menu. A direct link like <code>/design/#projects</code> opens straight to the section, and "Order another" at the bottom switches with a quick fade. The coffee ritual is for first visits, not a toll on every click.
+      </aside>
+    </div>
+
+    <section id="about" class="pane" data-pane="about" aria-labelledby="about-h">
+      <div class="sec-head"><h2 id="about-h">About me</h2><span class="label">Latte</span></div>
+      <div class="about-grid">
+        <figure class="portrait">
+          <img src="assets/img/fernando.jpg" width="720" height="862" alt="Fernando Quijada in a dark suit under the stone arches of Duke's West Campus">
+        </figure>
+        <div class="prose">
+          <p>I'm an engineer who designs from user research. I start by listening to the people who will use the thing, then prototype fast, with AI as part of the process (Figma, Claude, Claude Design, Lovable), and put something real in front of them as early as I can.</p>
+          <p>I'm a biomedical engineering senior at Duke, Class of 2027, earning the Certificate in Innovation &amp; Entrepreneurship, which has been mostly product management coursework: customer discovery, journey maps, PRDs. I'm an A. James Clark Scholar and a Duke BME Design Fellow.</p>
+          <p>What draws me to <strong>product design</strong> is the loop: understand the user, prototype quickly, learn from feedback, and change the design. My favorite part of a project is the client check-in that turns up a requirement nobody wrote down, and then the prototype that shows whether we listened.</p>
+          <p>I'm also a barista at BSEISU Coffee, which gives me a weekly view of the merchant side of food ordering: the rush, the order queue, and the moment someone hears their name and picks up their drink. This site borrows that loop.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="pane" data-pane="projects" aria-labelledby="projects-h">
+      <div class="sec-head"><h2 id="projects-h">Projects</h2><span class="label">Cortado</span></div>
+
+      <p class="proj-group label">Product design</p>
+
+      <a class="feature" href="projects/this-portfolio.html">
+        <div class="ph"><img src="assets/img/process/menu.png" width="960" height="600" alt="The home screen of this portfolio: a chalkboard drink menu where each drink opens one section"></div>
+        <div class="body">
+          <p class="label">Personal project · Oct to Nov 2026 · Designed with Claude</p>
+          <h3>Designing a portfolio you order like coffee</h3>
+          <p>How a shift behind the bar became this site's core flow (order, watch it get made, "your drink is ready"), six iterations to get there, and how I directed AI to build it.</p>
+          <p class="notes-label">Tasting notes</p>
+          <ul class="notes">
+            <li>Concept &amp; flows</li><li>Interaction design</li><li>Accessibility</li><li>Prototyping with AI</li><li>Iteration</li>
+          </ul>
+          <span class="cta">Read the case study →</span>
+        </div>
+      </a>
+
+      <!-- Hidden until Fernando sends the material. Each needs its page in projects/ before the card goes live.
+      <a class="feature" href="projects/pendo-onboarding.html"> ... AI onboarding for Pendo (Spring 2026) ... </a>
+      <a class="feature" href="projects/grain.html"> ... grain, "The Art of Context" (Fall 2026) ... </a>
+      -->
+
+      <p class="proj-group label">Physical product design</p>
+      <aside class="counter-note" hidden>
+        <b>Behind the counter</b>
+        Projects are split into screen-based and physical product design. Reviewers read two or three case studies closely, so the work closest to the role comes first. The physical projects stay because they're my strongest real-client research and iteration stories.
+      </aside>
+
+      <a class="feature" href="projects/microscope-stage.html">
+        <div class="ph"><img style="object-fit:contain;background:#333" src="assets/img/microscope-stage/cad-onshape.jpg" width="1214" height="1210" alt="3D render of the LED microscope stage assembly from Onshape"></div>
+        <div class="body">
+          <p class="label">Duke BME Design Fellows · Summer 2026 · Designed for a cancer research lab</p>
+          <h3>A microscope setup a researcher can switch in seconds</h3>
+          <p>A cancer researcher lost minutes and risked fragile LED fibers every time she changed her microscope setup. Recurring interviews and check-ins led to a full redesign that cut the change from 3 to 4 minutes to under 5 seconds.</p>
+          <p class="notes-label">Tasting notes</p>
+          <ul class="notes">
+            <li>User interviews</li><li>Prioritized needs</li><li>Low-fidelity prototypes</li><li>Iteration on feedback</li><li>Onshape &amp; 3D printing</li>
+          </ul>
+          <span class="cta">Read the case study →</span>
+        </div>
+      </a>
+
+      <a class="feature" href="projects/lightbox.html">
+        <div class="ph"><img src="assets/img/lightbox/front-led.jpg" width="1600" height="1200" alt="The 3D-printed Wall-E lightbox with a red LED lit on his chest"></div>
+        <div class="body">
+          <p class="label">BME 254 · Spring 2025</p>
+          <h3>Lightbox: a Wall-E you control with a button and two knobs</h3>
+          <p>A light controller designed as a character. His eyes are the lights, the button is his door, the knobs are on his back, and each knob turns smoothly across its whole range.</p>
+          <p class="notes-label">Tasting notes</p>
+          <ul class="notes">
+            <li>Concept</li><li>Physical interaction</li><li>Onshape</li><li>Electronics &amp; firmware</li>
+          </ul>
+          <span class="cta">Read the case study →</span>
+        </div>
+      </a>
+
+      <a class="feature" href="projects/ultrasound-water-tank.html">
+        <div class="ph"><img src="assets/img/water-tank/prototype-on-tank.jpg" width="577" height="433" alt="The finished acrylic water level monitor clamped to the side of a clear water tank"></div>
+        <div class="body">
+          <p class="label">EGR 101 · Fall 2023 · Client project, team of 4 · My part: hardware</p>
+          <h3>A flood alarm for an ultrasound lab</h3>
+          <p>A lab was worried about its test tanks flooding when nobody was in the room. About 60 ideas, two rounds of Pugh matrices, and one pivot later, we built a $56 monitor that buzzes and sends a Slack alert to the lab's phones.</p>
+          <p class="notes-label">Tasting notes</p>
+          <ul class="notes">
+            <li>Client interviews</li><li>Ideation</li><li>Pugh matrices</li><li>Alert design</li><li>Hardware build</li>
+          </ul>
+          <span class="cta">Read the case study →</span>
+        </div>
+      </a>
+    </section>
+
+    <section id="experience" class="pane" data-pane="experience" aria-labelledby="exp-h">
+      <div class="sec-head"><h2 id="exp-h">Experience</h2><span class="label">Cappuccino</span></div>
+      <ol class="timeline">
+        <li>
+          <span class="when">Fall 2026</span>
+          <div><h3>BME Senior Design <span>· Team of 5, in progress</span></h3>
+          <p>Clinical needs-finding with real users, a general surgeon and a neuro ICU nurse: shadowing their workflow, finding where it breaks, and designing for that moment. Our concept automates crushing, mixing, and flushing medications so feeding tubes don't clog.</p></div>
+        </li>
+        <li>
+          <span class="when">May – Jul 2026</span>
+          <div><h3>Design Fellow <span>· Duke BME Design Fellows</span></h3>
+          <p>Ran recurring interviews with two physician-researcher clients and turned their workflows into prioritized needs. Check-ins with one client caught two requirements I had missed, which led to a full redesign of her microscope setup.</p></div>
+        </li>
+        <li>
+          <span class="when">Jun – Jul 2026</span>
+          <div><h3>Teaching Assistant <span>· ODE Summer Design Camp</span></h3>
+          <p>Coached 28 students through the design process, from sketch to 3D-printed prototype, then built a printing workflow and trained every team to run it on their own, so nobody had to wait on a TA.</p></div>
+        </li>
+        <li>
+          <span class="when">Sep 2025 – now</span>
+          <div><h3>Barista <span>· BSEISU Coffee</span></h3>
+          <p>The merchant side of food ordering, every week: running a rush line of 20+ alone, sequencing orders while shots pull, and closing the café so it opens ready.</p></div>
+        </li>
+        <li>
+          <span class="when">May 2024 – now</span>
+          <div><h3>Vice President <span>· SHPE at Duke</span></h3>
+          <p>Built the chapter's sponsorship package (events with Lenovo, Deloitte, and Google) and founded mentorSHPE, which grew from 4 to 17 mentor pairs.</p></div>
+        </li>
+        <li>
+          <span class="when">May – Jul 2024</span>
+          <div><h3>Data+ Intern <span>· Duke Data+, with Oak Ridge National Laboratory</span></h3>
+          <p>Trained and compared 8 PyTorch image models, so I know how machine learning works under the hood, not just how to use it.</p></div>
+        </li>
+      </ol>
+
+      <div class="toolkit">
+        <div><h3>Research &amp; product</h3><p>User interviews, customer discovery, journey mapping, prioritized needs, PRDs, Jira</p></div>
+        <div><h3>Design &amp; prototyping</h3><p>Figma, prototyping with AI tools (Claude, Claude Design, Lovable), usability check-ins</p></div>
+        <div><h3>Code &amp; data</h3><p>Python (Pandas, NumPy, PyTorch), C/C++, HTML and CSS, Git</p></div>
+        <div><h3>Engineering</h3><p>Onshape, 3D printing, laser cutting, electronics and Arduino</p></div>
+      </div>
+
+      <div class="resume-row">
+        <a class="btn" href="resume/Fernando_Quijada_Resume.pdf" target="_blank" rel="noopener">Open my resume (PDF)</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/fq19" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+
+    <section id="interests" class="pane" data-pane="interests" aria-labelledby="int-h">
+      <div class="sec-head"><h2 id="int-h">Interests</h2><span class="label">Macchiato</span></div>
+      <p class="picks-intro">What I'm into when I'm not in the lab. We'll start with coffee, obviously.</p>
+      <div class="picks">
+        <article class="pick">
+          <p class="label">Off the clock · Coffee</p>
+          <h3>Coffee, from both sides of the counter</h3>
+          <p>My favorite way to spend a free day is hopping between coffee shops around the city, tasting how each one's coffee is different and trying the pastries that go with it. A lot of my work gets done at those café tables, too.</p>
+          <p>My home base is Cloche Coffee in Durham, a small shop where I am almost every weekend. My order never changes: an iced oat cortado with cinnamon on top. I order it at every new shop I try, so I can compare them fairly.</p>
+          <p>Behind the bar at BSEISU Coffee, I've been teaching myself latte art, and it's going great. Hearts are my go-to, I'm practicing new shapes, and matcha counts too.</p>
+          <div class="art-row">
+            <figure><div class="shot"><img src="assets/img/coffee/latte-heart.jpg" width="900" height="900" loading="lazy" alt="Top view of a latte with a white milk heart, poured by Fernando"></div><figcaption>Latte heart</figcaption></figure>
+            <figure><div class="shot"><img src="assets/img/coffee/latte-practice.jpg" width="900" height="900" loading="lazy" alt="Top view of a latte with a layered milk design Fernando is practicing"></div><figcaption>Practicing new shapes</figcaption></figure>
+            <figure><div class="shot"><img src="assets/img/coffee/matcha-heart.jpg" width="900" height="900" loading="lazy" alt="Top view of a green matcha latte with a white milk heart"></div><figcaption>Matcha heart</figcaption></figure>
+          </div>
+        </article>
+        <article class="pick">
+          <p class="label">Off the clock · Running</p>
+          <h3>Training for 26.2</h3>
+          <p>Running is how I de-stress. I put my music on loud, head out, and leave everything else behind for a while. In July I ran my first half marathon at an 8:42 per mile pace, and now I'm training for my first full marathon, which I want to run by the end of the school year.</p>
+          <ol class="miles" aria-label="Race milestones">
+            <li class="done"><span class="mi-dist">13.1 mi</span><span class="mi-name">First half marathon</span><span class="mi-pace">8:42 / mi average pace</span><span class="mi-when">Finished July 2026</span></li>
+            <li class="next"><span class="mi-dist">26.2 mi</span><span class="mi-name">First full marathon</span><span class="mi-when">In training · end of the school year</span></li>
+          </ol>
+        </article>
+        <article class="pick">
+          <p class="label">Off the clock · Baking</p>
+          <h3>Fresh out of my oven</h3>
+          <p>I love to bake, and most of what I make ends up as a treat for someone else. My favorite part is making a recipe mine. I tweak recipes until they feel like my own, or write my own from scratch. The caramelized bananas on top of my banana bread, for example, were my idea. A few things I've made:</p>
+          <div class="art-row">
+            <figure><div class="shot"><img src="assets/img/baking/cookies.jpg" width="800" height="800" loading="lazy" alt="A plate piled with chocolate chip cookies Fernando baked"></div><figcaption>Chocolate chip cookies</figcaption></figure>
+            <figure><div class="shot"><img src="assets/img/baking/basque-cheesecake.jpg" width="800" height="800" loading="lazy" alt="A whole blueberry Basque cheesecake with a dark caramelized top"></div><figcaption>Blueberry Basque cheesecake</figcaption></figure>
+            <figure><div class="shot"><img src="assets/img/baking/banana-bread.jpg" width="800" height="800" loading="lazy" alt="Banana bread with chocolate chunks and caramelized banana on top, in the loaf pan"></div><figcaption>Banana bread <span class="twist">My twist: caramelized banana top</span></figcaption></figure>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="connect" class="pane contact" data-pane="connect" aria-labelledby="contact-h">
+      <h2 id="contact-h">Let's grab <em>a coffee.</em></h2>
+      <div class="prose">
+        <p>I'm looking for product design roles starting in 2027. If you're designing something people use every day, I'd love to hear about it.</p>
+      </div>
+      <div class="email-row">
+        <span class="email" id="email">fernando.quijada@duke.edu</span>
+        <button class="btn ghost" type="button" data-copy="fernando.quijada@duke.edu" data-copy-msg="#copy-msg">Copy email</button>
+        <a class="btn" href="mailto:fernando.quijada@duke.edu">Write to me</a>
+      </div>
+      <p class="copy-msg" id="copy-msg" aria-live="polite"></p>
+      <ul class="connect-links">
+        <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/fq19" target="_blank" rel="noopener">linkedin.com/in/fq19</a></li>
+        <li><span class="label">Resume</span><a href="resume/Fernando_Quijada_Resume.pdf" target="_blank" rel="noopener">Fernando_Quijada_Resume.pdf</a></li>
+        <li><span class="label">Based in</span><span>Durham, NC</span></li>
+      </ul>
+    </section>
+
+    <aside class="counter-note" hidden>
+      <b>Behind the counter</b>
+      The glass in the corner empties as you scroll, so it doubles as a progress bar: reach the bottom and you've finished your drink. I tried a cup that filled up as you read, but an emptying glass matches what drinking feels like. Tap it for a fact.
+    </aside>
+
+    <nav class="another" aria-labelledby="another-h">
+      <h2 id="another-h" data-another-title>Finished your latte?</h2>
+      <p class="label">Order another</p>
+      <ul class="another-list" data-another></ul>
+    </nav>
+
+    <footer class="foot">
+      <p>© 2026 Fernando Quijada · Durham, NC · Plain HTML, CSS, and JavaScript, hosted on GitHub Pages.</p>
+    </footer>
+  </main>
+
+  <div class="sip">
+    <div class="sip-meta" aria-hidden="true">
+      <span class="label" data-cup-pct>100% left</span>
+      <span class="status" data-cup-status>Scroll to sip</span>
+    </div>
+    <button class="cup-btn" type="button" data-cup aria-label="Tap for a coffee fact or a fact about Fernando"></button>
+  </div>
+</div>
+
+<!-- ================= The bar (brewing overlay) ================= -->
+<div class="brew" id="brew" hidden aria-live="polite">
+  <p class="brew-toast" id="brew-toast">One latte, coming right up!</p>
+  <ol class="brew-track" id="brew-track" aria-label="Order status">
+    <li data-step="0"><span class="dot" aria-hidden="true"></span><span class="lbl">Order received</span></li>
+    <li data-step="1"><span class="dot" aria-hidden="true"></span><span class="lbl">Pulling shot</span></li>
+    <li data-step="2"><span class="dot" aria-hidden="true"></span><span class="lbl" data-milk-step>Steaming milk</span></li>
+    <li data-step="3"><span class="dot" aria-hidden="true"></span><span class="lbl">Ready!</span></li>
+  </ol>
+  <div class="brew-stage" id="brew-stage"></div>
+  <button class="brew-skip" type="button" id="brew-skip">Skip</button>
+  <aside class="counter-note brew-note" hidden>
+    <b>Behind the counter</b>
+    The tracker works like a delivery app's: a wait you can see moving feels shorter than a blank one. Skip and the Escape key end it any time, and if your device asks for reduced motion, the drink is simply served.
+  </aside>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

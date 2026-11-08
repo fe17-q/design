@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Designing This Portfolio · Fernando Quijada</title>
+<meta name="goatcounter" content="">
+<meta name="description" content="Case study: designing a portfolio you order like coffee. The concept, six iterations, accessibility decisions, and how I directed AI to build it.">
+<meta property="og:title" content="Designing a portfolio you order like coffee · Fernando Quijada">
+<meta property="og:image" content="../assets/img/process/menu.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M5 9h22l-2 17q-.3 2-2.3 2H9.3Q7.3 28 7 26Z' fill='%233b2416'/%3E%3Cpath d='M5.6 14h20.8l-.4 4H6Z' fill='%23c9a07a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-drink="projects">
+
+<div class="cs-top">
+  <a class="back" href="../index.html#projects">← Back to your cortado</a>
+  <div class="theme-switch" role="group" aria-label="Color theme">
+    <button type="button" data-set-theme="light" aria-pressed="false">Latte</button>
+    <button type="button" data-set-theme="dark" aria-pressed="false">Espresso</button>
+  </div>
+</div>
+
+<main class="cs">
+
+  <div class="cs-hero">
+    <div>
+      <p class="label">Case study · Personal project · Fall 2026</p>
+      <h1>Designing a portfolio you order like coffee</h1>
+      <p class="lede">A portfolio built around the flow I run every shift as a barista: take the order, make it while the customer watches, and call it out when it's ready. I set the direction and made the design calls. Claude wrote the code.</p>
+    </div>
+
+    <aside class="ticket" aria-label="Project summary">
+      <div class="t-head"><span>Order #0001</span><span>Oct to Nov 2026</span></div>
+      <dl>
+        <dt>Users</dt><dd>Recruiters, hiring managers, and admissions reviewers, often on a phone with two minutes to spare</dd>
+        <dt>My role</dt><dd>Concept, direction, content, and every design decision</dd>
+        <dt>Built with</dt><dd>Claude (code and first drafts), plain HTML, CSS, and JavaScript, GitHub Pages</dd>
+        <dt>Timeline</dt><dd>About two weeks, then ongoing</dd>
+      </dl>
+      <div class="t-total"><span>Iterations</span><strong>6 and counting</strong></div>
+    </aside>
+  </div>
+
+  <figure style="margin-top:40px">
+    <div class="shot" style="aspect-ratio: 16 / 10"><img src="../assets/img/process/menu.png" width="960" height="600" alt="The portfolio's home screen: Fernando's name, a one-line summary, and a chalkboard menu of five drinks, each labeled with the section it opens"></div>
+    <figcaption><b>The menu</b>Each drink opens one section, and the label on the right says which.</figcaption>
+  </figure>
+
+  <section class="cs-section" aria-labelledby="problem-h">
+    <header><span class="label">01</span><h2 id="problem-h">The problem</h2></header>
+    <div class="cs-body">
+      <p>I needed a portfolio for a graduate application and for job applications, and I had never made one. Two kinds of people would read it:</p>
+      <ul>
+        <li><strong>The reviewer in a hurry.</strong> They skim, often on a phone, and decide in under two minutes whether to read a case study closely. Anything that stands between them and the work costs me.</li>
+        <li><strong>The reviewer who remembers.</strong> They see dozens of portfolios that look the same. A site with a clear point of view is easier to remember and talk about later.</li>
+      </ul>
+      <p>Those pull in opposite directions. Personality usually means more motion and more clicks, and speed usually means a plain template.</p>
+      <p class="callout">Make a portfolio people remember, without ever making a reviewer wait for the work.</p>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="concept-h">
+    <header><span class="label">02</span><h2 id="concept-h">The concept</h2></header>
+    <div class="cs-body">
+      <p>I'm a barista at BSEISU Coffee, so I already knew a flow that turns a short wait into a good moment: someone orders, watches the drink being made, and hears their name when it's ready. Food ordering apps run on the same loop. So I made the site work that way. Each section is a drink, made to order.</p>
+      <p>Before deciding on a look, I asked Claude to gather ten portfolios I could react to. I picked two to learn from:</p>
+      <ul>
+        <li><strong>Henry Heffernan</strong>, for play. His site rewards curiosity.</li>
+        <li><strong>Brittany Chiang</strong>, for readability. Her site gets out of the way of the content.</li>
+      </ul>
+      <p>The rule that came out of that pairing: the coffee layer can delight, but it should never sit between a reviewer and the work.</p>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="process-h">
+    <header><span class="label">03</span><h2 id="process-h">How it evolved</h2><p class="label" style="text-transform:none;letter-spacing:0">Six versions. The biggest change was my idea, and it threw out the version before it.</p></header>
+    <div class="cs-body wide">
+      <ol class="steps">
+        <li><div><h3>A café-menu sidebar</h3>
+          <p>The first version used Brittany Chiang's layout: a sticky column with my name and links, and the content scrolling beside it, dressed as a café menu. It was readable but felt like a template with a coffee skin.</p></div></li>
+        <li><div><h3>A pour intro</h3>
+          <p>Next came an intro animation: milk poured into espresso, the latte art spelled "welcome," and the page zoomed into the cup. It was fun once, but it was a gate every visitor had to wait through, and it didn't connect to anything after it.</p></div></li>
+        <li class="pivot"><div><h3>The drink menu <span>My idea</span></h3>
+          <p>I proposed turning the whole site into an order. The home page became a chalkboard menu, each section a drink, made to order and handed over with "Your drink is ready!" This replaced the intro. Now the animation only plays when you choose something, so it feels like a response to you instead of a wall. I also added a glass in the corner that empties as you scroll.</p></div></li>
+        <li class="pivot"><div><h3>Side view or top-down</h3>
+          <p>The brewing started as a top-down view. We built a side-view version too, so I could compare the two running side by side instead of imagining them. I chose the side view, with the camera tilting up and zooming into the latte art in one continuous move.</p></div></li>
+        <li><div><h3>Polish</h3>
+          <p>Smoother latte art with no popping, a more realistic steel pitcher, and drinks made to real recipes: a cortado is half espresso and half milk, a cappuccino is roughly thirds. Small details, but coffee people notice.</p></div></li>
+        <li><div><h3>Full case studies</h3>
+          <p>Each project became an order ticket and a case study written from my own reports, photos, and CAD. Later, "Order another" was changed to skip the brewing, since the ritual is for the first order, not every click.</p></div></li>
+      </ol>
+
+      <div class="evolution">
+        <figure>
+          <div class="shot" style="aspect-ratio: 4 / 3"><img src="../assets/img/process/brew-top.png" width="800" height="600" loading="lazy" alt="Top-down brewing: a cup seen from above with a dot of milk landing in the espresso, under the order tracker"></div>
+          <figcaption><b>Top-down</b>Clean, but you can't see what's being made.</figcaption>
+        </figure>
+        <span class="arrow" aria-hidden="true">I chose →</span>
+        <figure>
+          <div class="shot" style="aspect-ratio: 4 / 3"><img src="../assets/img/process/brew-side.png" width="800" height="600" loading="lazy" alt="Side-view brewing: a steel milk pitcher pouring into a cup, under the order tracker"></div>
+          <figcaption><b>Side view</b>The pour reads instantly, then the camera tilts up to the art.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="ux-h">
+    <header><span class="label">04</span><h2 id="ux-h">Designing for the reviewer in a hurry</h2></header>
+    <div class="cs-body">
+      <p>Most of the design work went into making the playful parts optional.</p>
+      <ul>
+        <li><strong>Labels before puns.</strong> Every drink shows the section it opens and what's inside ("Cortado: case studies, from research to prototype"). A first-time visitor shouldn't have to know what a cortado is to find my work.</li>
+        <li><strong>"Just browsing? See everything."</strong> One tap skips the menu and the animation and shows every section on one page.</li>
+        <li><strong>Direct links skip the animation.</strong> A link like <code>#projects</code> opens straight to the content, so a link I send a recruiter never makes them wait.</li>
+        <li><strong>Always escapable.</strong> A Skip button and the Escape key end the brewing at any point. With reduced motion turned on, the drink is simply served.</li>
+        <li><strong>An order tracker.</strong> During the brew, a tracker moves through "Order received, Pulling shot, Steaming milk, Ready," like a delivery app's. A wait you can see moving feels shorter than a blank one, and it tells you how long is left.</li>
+        <li><strong>Readable in both themes.</strong> A light Latte theme and a dark Espresso theme, alt text on every image, and layouts checked on a phone with no sideways scrolling.</li>
+      </ul>
+      <div class="evolution" style="margin-top:8px">
+        <figure>
+          <div class="shot" style="aspect-ratio: 4 / 3"><img src="../assets/img/process/brew-side-tilt.png" width="800" height="600" loading="lazy" alt="The latte art heart forming in the cup while the tracker shows Steaming milk"></div>
+          <figcaption><b>Tracker</b>Every step lines up with what's on screen.</figcaption>
+        </figure>
+        <span class="arrow" aria-hidden="true"></span>
+        <figure>
+          <div class="shot" style="aspect-ratio: 390 / 844"><img src="../assets/img/process/mobile-menu-dark.png" width="390" height="844" loading="lazy" alt="The drink menu on a phone in the dark Espresso theme"></div>
+          <figcaption><b>Phone, Espresso theme</b>Built to work one-handed.</figcaption>
+        </figure>
+      </div>
+      <p><strong>Behind the counter.</strong> This version of the site adds a toggle that shows short design notes right where each decision lives: why "See everything" exists, why direct links skip the brewing, why the glass empties as you scroll. Reviewers can see the reasoning on the work itself instead of only in this write-up.</p>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="ai-h">
+    <header><span class="label">05</span><h2 id="ai-h">How I worked with AI</h2></header>
+    <div class="cs-body wide">
+      <p style="max-width:68ch">I built this site with Claude. I didn't write the code. I directed the work: I set the goals and rules, made the design decisions, checked every fact, and pushed back when something didn't fit. Working this way meant I could try ideas as real, clickable prototypes in minutes instead of describing them in a doc.</p>
+      <div class="role-split">
+        <div class="role-card">
+          <h3>What I did</h3>
+          <ul>
+            <li>Set the rules up front: plain HTML that runs on GitHub Pages, motion that supports the story, no generic template look, and no overclaiming.</li>
+            <li>Picked the references and the coffee concept.</li>
+            <li>Came up with the drink menu, which replaced the intro animation.</li>
+            <li>Compared both camera angles and chose the side view.</li>
+            <li>Wrote and corrected the content: my role on each team, which numbers to show, and which photos to leave out.</li>
+            <li>Held the coffee to real recipes.</li>
+          </ul>
+        </div>
+        <div class="role-card team">
+          <h3>What Claude did</h3>
+          <ul>
+            <li>Gathered the example portfolios I chose from.</li>
+            <li>Wrote all the HTML, CSS, and JavaScript, including the brewing animation, the camera tilt, and the latte art, all drawn in code.</li>
+            <li>Drafted case study copy from my reports, memos, and photos for me to edit.</li>
+            <li>Built side-by-side versions so I could compare options instead of imagining them.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="lessons">
+        <div class="lesson"><h3>Where I redirected it</h3>
+          <p>The pour intro was polished, but I dropped it for the menu. Its first case study drafts gave me more credit than I'd earned on team projects, so I cut back the wording until it matched what I actually did. When my notes and my resume disagreed on a number, it stayed off the site until I confirmed it.</p></div>
+        <div class="lesson"><h3>What I learned</h3>
+          <p>AI makes the first version cheap, which makes judgment the real work. The fastest progress came from comparing two built options and choosing, not from writing a better prompt.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="next-h">
+    <header><span class="label">06</span><h2 id="next-h">What's next</h2></header>
+    <div class="cs-body">
+      <ul>
+        <li><strong>Measure it.</strong> I'm adding privacy-friendly analytics (no cookies) to see which drinks people order, which case studies they open, and how often they skip the brewing. If most people skip, the animation gets shorter.</li>
+        <li><strong>Test it cold.</strong> The bar I'm holding it to: someone who has never seen the site reaches a case study in about 15 seconds without getting annoyed.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="next-up">
+    <a class="back" href="../index.html#projects">← Back to your cortado</a>
+    <a class="back" href="../index.html#menu">Change order</a>
+  </div>
+</main>
+
+<div class="sip">
+  <div class="sip-meta" aria-hidden="true">
+    <span class="label" data-cup-pct>100% left</span>
+    <span class="status" data-cup-status>Scroll to sip</span>
+  </div>
+  <button class="cup-btn" type="button" data-cup aria-label="Your cortado. Tap for a coffee fact or a fact about Fernando."></button>
+</div>
+
+<dialog class="lb" aria-label="Enlarged image">
+  <button type="button">Close</button>
+  <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">
+  <p></p>
+</dialog>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
