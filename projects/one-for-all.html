@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Student Hub · Fernando Quijada</title>
+<title>One-For-All · Fernando Quijada</title>
 <meta name="goatcounter" content="">
-<meta name="description" content="Case study: Student Hub, an app that puts everything a student needs to finish an assignment in one place. Designed and prototyped with AI, shipped, and tested with real users.">
-<meta property="og:title" content="Student Hub · Fernando Quijada">
+<meta name="description" content="Case study: One-For-All, an app that puts everything a student needs to finish an assignment in one place. Designed and prototyped with AI, shipped, and tested with real users.">
+<meta property="og:title" content="One-For-All · Fernando Quijada">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M5 9h22l-2 17q-.3 2-2.3 2H9.3Q7.3 28 7 26Z' fill='%233b2416'/%3E%3Cpath d='M5.6 14h20.8l-.4 4H6Z' fill='%23c9a07a'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,20 +28,21 @@
   <div class="cs-hero">
     <div>
       <p class="label">Case study · Personal project · Fall 2026</p>
-      <h1>Student Hub: everything a student has due, in one place</h1>
-      <p class="lede">My assignments lived in Canvas, my reminders somewhere else, and my files in Google Drive. I designed an app that brings them onto one screen, prototyped it with AI, shipped it, and changed it based on what my friends told me.</p>
+      <h1>One-For-All: everything a student has due, in one place</h1>
+      <p class="lede">My assignments lived in Canvas, my reminders in Apple Reminders, and my files in Google Drive. I designed an app that brings them onto one screen, prototyped it with AI, shipped it, and changed it based on what my friends told me.</p>
     </div>
 
     <aside class="ticket" aria-label="Project summary">
       <div class="t-head"><span>Order #1108</span><span>Fall 2026</span></div>
       <dl>
-        <dt>Project</dt><dd>Student Hub <span class="todo">TODO: final app name</span></dd>
+        <dt>Project</dt><dd>One-For-All</dd>
         <dt>Context</dt><dd>Personal project, Fall 2026</dd>
         <dt>My role</dt><dd>Problem finding, product and interaction design, visual design, prototyping with AI, shipping, user testing</dd>
         <dt>Team</dt><dd>Just me, plus 3 friends who tested it</dd>
         <dt>Tools</dt><dd>Claude Design, Claude, GitHub, Railway, Canvas calendar feed, Google Drive</dd>
         <dt>Timeline</dt><dd>Nov 8 to 11, 2026</dd>
       </dl>
+      <div class="t-total"><span>Apps to track my work</span><strong>5 → 1</strong></div>
       <div class="t-total"><span>Idea to live app</span><strong>Under 1 day</strong></div>
     </aside>
   </div>
@@ -52,7 +53,7 @@
   </div>
 
   <figure style="margin-top:40px">
-    <div class="shot placeholder" style="aspect-ratio: 16 / 9" role="img" aria-label="Placeholder: the final Student Hub home screen on a phone and a computer side by side, with the serif greeting, the weekly marble jar, and the Coming up list in sage, cream and white">
+    <div class="shot placeholder" style="aspect-ratio: 16 / 9" role="img" aria-label="Placeholder: the final One-For-All home screen on a phone and a computer side by side, with the serif greeting, the weekly marble jar, and the Coming up list in sage, cream and white">
       <span>TODO: final Home screen, phone and computer side by side</span>
     </div>
     <figcaption><b>Final design</b>Home on a phone and a computer.</figcaption>
@@ -61,23 +62,46 @@
   <section class="cs-section" aria-labelledby="problem-h">
     <header><span class="label">01</span><h2 id="problem-h">The problem</h2></header>
     <div class="cs-body">
-      <p>I noticed it in my own week. Canvas has my assignments, deadlines, and descriptions, but no reminders. My reminders lived in another app <span class="todo">TODO: which reminder app, and how often I copied deadlines into it</span>, and my files lived in a Google Drive folder for each class. To finish one assignment, I bounced between all of them.</p>
+      <p>I noticed it in my own week. Canvas has my assignments, deadlines, and descriptions, but no reminders. So I copied every deadline into Apple Reminders by hand, kept my schedule in Google Calendar, and kept my files in a Google Drive folder for each class. When a professor linked a document, Word joined the mix too. To finish one assignment and keep track of the rest, I switched between all of them.</p>
+      <p>This semester it cost me: I turned in an assignment late because I forgot to add it to my reminders.</p>
       <p class="callout">"Students have things scattered everywhere, from canvas, to calendar, to google docs, to reminders. I want to build an app that puts everything in one place."</p>
       <p><strong>Before</strong>, one assignment looked like this:</p>
       <ol class="flow">
         <li>Open Canvas, find the assignment and its deadline.</li>
-        <li>Copy the deadline into a reminder app.</li>
+        <li>Copy the deadline into Apple Reminders, and remember to do it every time.</li>
+        <li>Check Google Calendar to see when I can work on it.</li>
         <li>When it's time to work, go back to Canvas for the description.</li>
         <li>Open Google Drive and find the class folder.</li>
-        <li>Create or find the Google Doc.</li>
+        <li>Create or find the Google Doc, or open the Word file the professor linked.</li>
       </ol>
-      <p><span class="todo">TODO: number of apps, app switches and clicks for one real assignment, and whether Google Calendar was part of it</span></p>
-      <p><span class="todo">TODO: a time I missed or nearly missed a deadline because of this</span></p>
+      <p>That's up to five apps (Canvas, Reminders, Calendar, Drive, and sometimes Word) for one assignment, and one forgotten step means a missed deadline.</p>
       <figure>
-        <div class="shot placeholder" style="aspect-ratio: 16 / 7" role="img" aria-label="Placeholder: before and after diagram. Before: five steps across Canvas, a reminder app and Google Drive. After: one screen with the deadline, description, reminder and doc together.">
-          <span>TODO: before vs. after workflow diagram</span>
+        <div class="wf" role="img" aria-label="Before and after diagram. Before: one assignment meant switching between Canvas, Apple Reminders, Google Calendar, Google Drive and sometimes Word. After: One-For-All shows the deadline, description, reminder and doc on one screen.">
+          <div class="wf-side">
+            <p class="label">Before · up to 5 apps</p>
+            <ol class="wf-apps">
+              <li><b>Canvas</b><span>assignment, deadline, description</span></li>
+              <li><b>Apple Reminders</b><span>deadline copied by hand</span></li>
+              <li><b>Google Calendar</b><span>when to work on it</span></li>
+              <li><b>Google Drive</b><span>class folder and doc</span></li>
+              <li class="maybe"><b>Word</b><span>when a professor links a file</span></li>
+            </ol>
+          </div>
+          <span class="wf-arrow" aria-hidden="true">→</span>
+          <div class="wf-side wf-after">
+            <p class="label">After · 1 app</p>
+            <div class="wf-screen">
+              <b>One-For-All</b>
+              <ul>
+                <li>Deadline and description, synced from Canvas</li>
+                <li>Reminders 24 h and 2 h before</li>
+                <li>Class or team folder, with Create doc / Open doc</li>
+                <li>Mark as complete, and a marble drops in the jar</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <figcaption><b>Before vs. after</b>Five steps across three apps, then one screen.</figcaption>
+        <figcaption><b>Before vs. after</b>Six steps across up to five apps, then one screen.</figcaption>
       </figure>
     </div>
   </section>
@@ -87,7 +111,7 @@
     <div class="cs-body">
       <ul>
         <li><strong>Me, first.</strong> I designed around my own workflow, then used the real app with my own Canvas. Using it is where many of the next features came from: group assignments, notification settings, and automatic folder linking.</li>
-        <li><strong>3 friends who tested it.</strong> Other students with the same scattered setup. <span class="todo">TODO: their year or major, how long each used it, and whether they used it on a phone or a computer</span></li>
+        <li><strong>3 friends who tested it.</strong> Seniors in biomedical engineering, like me, with the same scattered setup. They're actively using it on their phones.</li>
       </ul>
       <p>I built it for myself first, but in a way that could grow to other students.</p>
     </div>
@@ -117,11 +141,11 @@
           <p><strong>Why:</strong> some assignments are solo and some are group. Asking once lets the app pick the right folder every time after, instead of making you choose each time.</p></div>
         <div class="lesson"><h3>4. A weekly marble jar</h3>
           <p><strong>Chose:</strong> a jar that gets a marble for each assignment you finish, empties on its own at the end of the week, and shakes when you tap it.</p>
-          <p><strong>Considered:</strong> a jar that fills with liquid, and a "Collect jar" button. I chose marbles and automatic collection. <span class="todo">TODO: why marbles, and why automatic</span></p>
-          <p><strong>Why:</strong> a to-do list only shows what's left. The jar shows what you've done this week, which is the part that keeps you going.</p></div>
+          <p><strong>Considered:</strong> a jar that fills with liquid, and a "Collect jar" button. I chose marbles because when I was growing up, I had a jar where I collected marbles with my grandma. Collection happens on its own, so the jar is something you look back on, not one more chore.</p>
+          <p><strong>Why:</strong> a to-do list only shows what's left. I wanted the jar to give a sense of accomplishment and a bit of inspiration: look back and you see every jar you've filled and every marble in it.</p></div>
         <div class="lesson"><h3>5. Calm, Apple-like look</h3>
           <p><strong>Chose:</strong> frosted glass cards, a classic serif (EB Garamond) for the greeting, and sage green, cream, and white. The greeting comes first, then the week summary and jar, then what's coming up. Class colors were softened so they match the palette but stay easy to tell apart.</p>
-          <p><strong>Considered:</strong> the first pass was blue and lavender. I replaced it. <span class="todo">TODO: why sage, cream and white, and where the font reference came from</span></p>
+          <p><strong>Considered:</strong> the first pass was blue and lavender. I replaced it with sage, cream, and white because they're soothing to look at: soft and earthy, but also elegant and timeless.</p>
           <p><strong>Why:</strong> I wanted it to feel "deluxe" and "part of the apple ecosystem," something you'd want to open.</p></div>
       </div>
       <div class="trio">
@@ -130,7 +154,7 @@
           <figcaption><b>One screen</b>Description, deadline, doc, done.</figcaption>
         </figure>
         <figure>
-          <div class="shot placeholder" style="aspect-ratio: 9 / 16" role="img" aria-label="Placeholder: a Student Hub reminder notification on an iPhone lock screen"><span>TODO: reminder on lock screen</span></div>
+          <div class="shot placeholder" style="aspect-ratio: 9 / 16" role="img" aria-label="Placeholder: a One-For-All reminder notification on an iPhone lock screen"><span>TODO: reminder on lock screen</span></div>
           <figcaption><b>Reminders</b>24 hours and 2 hours before.</figcaption>
         </figure>
         <figure>
@@ -191,13 +215,12 @@
           <tbody>
             <tr><td>Friend testers</td><td>"Coming up" on Home shows assignments past the deadline.</td><td>Home shows only upcoming assignments.</td><td>Shipped Nov 11</td></tr>
             <tr><td>Friend testers</td><td>Home "feels redundant compared to the assignments tab."</td><td>Made Home's list read-only, with no checkboxes. Checking off happens in Assignments.</td><td>Shipped Nov 11</td></tr>
-            <tr class="win"><td>Friend testers</td><td>(same)</td><td><strong>Didn't act on it all the way, on purpose.</strong> I kept the greeting, jar, and weekly stats on Home. They aren't in the Assignments tab, and they're what make Home worth opening.</td><td><span class="todo">TODO: what they said after</span></td></tr>
+            <tr class="win"><td>Friend testers</td><td>(same)</td><td><strong>Didn't act on it all the way, on purpose.</strong> I kept the greeting, jar, and weekly stats on Home. They aren't in the Assignments tab, and they're what make Home worth opening.</td><td>Kept on purpose</td></tr>
             <tr class="win"><td>Friend testers</td><td>Some didn't keep a Drive folder for each class. Some kept class folders on their computer.</td><td><strong>Not yet, on purpose.</strong> The app was built around my setup, and supporting other ways of storing files is a bigger change. It's my top next step.</td><td>Planned</td></tr>
             <tr><td>Me, using it</td><td>I wanted group work, notification settings, and the right folder picked for me.</td><td>Built group assignments, per-reminder switches, and automatic personal or team folders.</td><td>Shipped Nov 9</td></tr>
           </tbody>
         </table>
       </div>
-      <p style="max-width:68ch"><span class="todo">TODO: which friend said which comment</span></p>
       <div class="duo">
         <figure>
           <div class="shot placeholder" style="aspect-ratio: 9 / 16" role="img" aria-label="Placeholder: Home before feedback, with past-due assignments and checkboxes in the Coming up list"><span>TODO: Home before feedback</span></div>
@@ -216,7 +239,7 @@
     <div class="cs-body">
       <p>I used Claude to go from an idea to a working product fast. My loop was <strong>describe → prototype → test → iterate</strong>:</p>
       <ol class="flow">
-        <li><strong>Describe.</strong> I wrote out the problem, who it was for, and every page I wanted, then agreed on a plan: design first, then build.</li>
+        <li><strong>Describe.</strong> Before prototyping anything, I sat down and worked out what I wanted from the app and its core features. Then I wrote out the problem, who it was for, and every page, and set the plan: design first, then build.</li>
         <li><strong>Prototype.</strong> In Claude Design, I turned my descriptions into phone and computer screens, light and dark, and changed them by saying what I wanted: a font reference, a palette, where the jar should sit.</li>
         <li><strong>Test.</strong> When I decided the prototype was solid, I used Claude to build it as a real app. I set it up online myself, linked my own Canvas, and installed it on my phone so I could use it every day.</li>
         <li><strong>Iterate.</strong> I kept a list of what I'd change from using it, then from my friends, and shipped those changes the same day.</li>
@@ -231,7 +254,6 @@
         <li>Chose what to change after testing, and what to keep.</li>
       </ul>
       <p><strong>What it changed.</strong> Each design change came back in under two minutes, so I could try the jar in four places and dark mode four ways in one evening. The real app was online the next day, which meant I could test with real users instead of just showing a prototype.</p>
-      <p><span class="todo">TODO: how AI changed how I think about design, where it helped least, and whether I sketched anything by hand or in Figma</span></p>
     </div>
   </section>
 
@@ -248,9 +270,9 @@
       </ol>
       <ul>
         <li>My real Canvas assignments came in correctly on the first try.</li>
-        <li>3 friends used it enough to have opinions about Home and Assignments, and that feedback changed the design.</li>
-        <li><span class="todo">TODO: app switches or clicks before vs. after, and any usage numbers (opens, assignments checked off, jars filled)</span></li>
-        <li><span class="todo">TODO: a tester quote, and whether testers kept using it</span></li>
+        <li>My 3 friends used it enough to have opinions about Home and Assignments, and that feedback changed the design.</li>
+        <li>Tracking my work went from up to five apps to one. Deadlines come in from Canvas on their own, so I no longer have to remember to copy them into a reminder app, the step that made me late this semester.</li>
+        <li>My 3 testers are still using it on their phones.</li>
       </ul>
       <figure>
         <div class="shot placeholder" style="aspect-ratio: 9 / 16; max-width: 320px" role="img" aria-label="Placeholder: short screen recording of opening an assignment, checking it off, and a marble dropping into the jar"><span>TODO: optional screen recording of the main flow</span></div>
@@ -277,7 +299,7 @@
         <div class="lesson"><h3>Feedback is input, not orders</h3>
           <p>"Home feels redundant" could have meant deleting Home. I fixed the part that overlapped and kept the part that made Home worth opening.</p></div>
       </div>
-      <p style="max-width:68ch"><strong>Next:</strong> support students whose files aren't organized like mine, add a real Google sign-in so "Create doc" puts the doc in the right folder directly, and maybe a native iPhone app later. <span class="todo">TODO: priority order, early ideas for the file problem, and what I'd test next with whom</span></p>
+      <p style="max-width:68ch"><strong>Next:</strong> my top priority is figuring out what to do for students who don't keep a Drive folder for each class. To learn more, I'm sharing it with more friends and collecting their feedback. Later: a real Google sign-in so "Create doc" puts the doc in the right folder directly, and maybe a native iPhone app.</p>
     </div>
   </section>
 
