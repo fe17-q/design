@@ -631,3 +631,5 @@ html.brewing, html.brewing body { overflow: hidden; }
 @media (max-width: 639px) { .wf-arrow { transform: rotate(90deg); } }
 .wf-screen { border: 2px solid var(--crema); border-radius: 14px; padding: 16px 16px 18px; background: var(--paper); }
 .wf-screen ul { margin: 10px 0 0; padding-left: 1.1em; display: grid; gap: 6px; font-size: .88rem; }
+.trio .shot.phone, .duo .shot.phone, .evolution .shot.phone, .shot.phone { aspect-ratio: 800 / 1739; border-radius: 14px; background: #000; }
+@media (max-width: 639px) { .trio figure:has(.shot.phone), .duo figure:has(.shot.phone), .evolution figure:has(.shot.phone) { max-width: 260px; margin-inline: auto; width: 100%; } }
