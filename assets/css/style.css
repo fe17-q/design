@@ -633,3 +633,4 @@ html.brewing, html.brewing body { overflow: hidden; }
 .wf-screen ul { margin: 10px 0 0; padding-left: 1.1em; display: grid; gap: 6px; font-size: .88rem; }
 .trio .shot.phone, .duo .shot.phone, .evolution .shot.phone, .shot.phone { aspect-ratio: 800 / 1739; border-radius: 14px; background: #000; }
 @media (max-width: 639px) { .trio figure:has(.shot.phone), .duo figure:has(.shot.phone), .evolution figure:has(.shot.phone) { max-width: 260px; margin-inline: auto; width: 100%; } }
+.solo-shot { max-width: 300px; } .solo-shot .shot { aspect-ratio: auto; }
