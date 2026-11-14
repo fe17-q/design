@@ -40,7 +40,6 @@
         <dt>My role</dt><dd>Problem finding, product and interaction design, visual design, prototyping with AI, shipping, user testing</dd>
         <dt>Team</dt><dd>Just me, plus 3 friends who tested it</dd>
         <dt>Tools</dt><dd>Claude Design, Claude, GitHub, Railway, Canvas calendar feed, Google Drive</dd>
-        <dt>Timeline</dt><dd>Nov 8 to 11, 2026</dd>
       </dl>
       <div class="t-total"><span>Apps to track my work</span><strong>5 → 1</strong></div>
     </aside>
@@ -141,15 +140,13 @@
           <p><strong>Why:</strong> this is the insight in one screen. If you still have to leave to find the file, the scatter is back.</p></div>
         <div class="lesson"><h3>2. Reminders that come to you</h3>
           <p><strong>Chose:</strong> phone notifications 24 hours and 2 hours before each deadline, an optional morning summary, and an alert when a teammate assigns you a task, each with its own switch.</p>
-          <p><strong>Considered:</strong> a native iPhone app. A web app you install from the browser still gets real iPhone notifications without the $99 a year developer fee or App Store review, so native can come later.</p>
           <p><strong>Why:</strong> copying deadlines into a reminder app was the step I wanted gone.</p></div>
         <div class="lesson"><h3>3. Group or solo, asked once</h3>
           <p><strong>Chose:</strong> the first time you open an assignment, it asks "Is this a group assignment?" with two answers: Just me or Group. Group work gets a team, tasks assigned to teammates with notes, and the team's shared Drive folder. Solo work opens your own class folder.</p>
           <p><strong>Why:</strong> some assignments are solo and some are group. Asking once lets the app pick the right folder every time after, instead of making you choose each time.</p></div>
         <div class="lesson"><h3>4. A weekly marble jar</h3>
           <p><strong>Chose:</strong> a jar that gets a marble for each assignment you finish, empties on its own at the end of the week, and shakes when you tap it.</p>
-          <p><strong>Considered:</strong> a jar that fills with liquid, and a "Collect jar" button. I chose marbles because when I was growing up, I had a jar where I collected marbles with my grandma. Collection happens on its own, so the jar is something you look back on, not one more chore.</p>
-          <p><strong>Why:</strong> a to-do list only shows what's left. I wanted the jar to give a sense of accomplishment and a bit of inspiration: look back and you see every jar you've filled and every marble in it.</p></div>
+          <p><strong>Why:</strong> a to-do list only shows what's left. I wanted the jar to give a sense of accomplishment and a bit of inspiration: look back and you see every jar you've filled and every marble in it. The marbles come from my childhood. Growing up, I had a jar where I collected marbles with my grandma.</p></div>
         <div class="lesson"><h3>5. Calm, Apple-like look</h3>
           <p><strong>Chose:</strong> frosted glass cards, a classic serif (EB Garamond) for the greeting, and sage green, cream, and white. The greeting comes first, then the week summary and jar, then what's coming up. Class colors were softened so they match the palette but stay easy to tell apart.</p>
           <p><strong>Considered:</strong> the first pass was blue and lavender. I replaced it with sage, cream, and white because they're soothing to look at: soft and earthy, but also elegant and timeless.</p>
@@ -191,11 +188,10 @@
         <table>
           <thead><tr><th>Who</th><th>What they said</th><th>What I did</th><th>Result</th></tr></thead>
           <tbody>
-            <tr><td>Friend testers</td><td>"Coming up" on Home shows assignments past the deadline.</td><td>Home shows only upcoming assignments.</td><td>Shipped Nov 11</td></tr>
-            <tr><td>Friend testers</td><td>Home "feels redundant compared to the assignments tab."</td><td>Made Home's list read-only, with no checkboxes. Checking off happens in Assignments.</td><td>Shipped Nov 11</td></tr>
-            <tr class="win"><td>Friend testers</td><td>(same)</td><td><strong>Didn't act on it all the way, on purpose.</strong> I kept the greeting, jar, and weekly stats on Home. They aren't in the Assignments tab, and they're what make Home worth opening.</td><td>Kept on purpose</td></tr>
+            <tr><td>Friend testers</td><td>"Coming up" on Home shows assignments past the deadline.</td><td>Home shows only upcoming assignments.</td><td>Shipped</td></tr>
+            <tr class="win"><td>Friend testers</td><td>Home "feels redundant compared to the assignments tab."</td><td>Changed only the "Coming up" list: it's now read-only, with no checkboxes, and checking off happens in Assignments. <strong>I kept the greeting, jar, and weekly stats on purpose.</strong> They aren't in the Assignments tab, and they're what make Home worth opening.</td><td>Shipped</td></tr>
             <tr class="win"><td>Friend testers</td><td>Some didn't keep a Drive folder for each class. Some kept class folders on their computer.</td><td><strong>Not yet, on purpose.</strong> The app was built around my setup, and supporting other ways of storing files is a bigger change. It's my top next step.</td><td>Planned</td></tr>
-            <tr><td>Me, using it</td><td>I wanted group work, notification settings, and the right folder picked for me.</td><td>Built group assignments, per-reminder switches, and automatic personal or team folders.</td><td>Shipped Nov 9</td></tr>
+            <tr><td>Me, using it</td><td>I wanted group work, notification settings, and the right folder picked for me.</td><td>Built group assignments, per-reminder switches, and automatic personal or team folders.</td><td>Shipped</td></tr>
           </tbody>
         </table>
       </div>
@@ -205,23 +201,23 @@
   <section class="cs-section" aria-labelledby="ai-h">
     <header><span class="label">07</span><h2 id="ai-h">How I used AI</h2></header>
     <div class="cs-body">
-      <p>I used Claude to go from an idea to a working product fast. My loop was <strong>describe → prototype → test → iterate</strong>:</p>
+      <p>I used Claude to go from an idea to a working product fast. My loop was <strong>plan → prototype → test → iterate</strong>:</p>
       <ol class="flow">
-        <li><strong>Describe.</strong> Before prototyping anything, I sat down and worked out what I wanted from the app and its core features. Then I wrote out the problem, who it was for, and every page, and set the plan: design first, then build.</li>
-        <li><strong>Prototype.</strong> In Claude Design, I turned my descriptions into phone and computer screens, light and dark, and changed them by saying what I wanted: a font reference, a palette, where the jar should sit.</li>
+        <li><strong>Plan.</strong> Before prototyping anything, I sat down and worked out what I wanted from the app and its core features. Then I wrote out the problem, who it was for, and every page, and set the plan: design first, then build.</li>
+        <li><strong>Prototype.</strong> I designed every screen in Claude Design at high fidelity, for phone and computer, in light and dark mode, and refined the flows and layouts until they felt right before building anything.</li>
         <li><strong>Test.</strong> When I decided the prototype was solid, I used Claude to build it as a real app. I set it up online myself, linked my own Canvas, and installed it on my phone so I could use it every day.</li>
         <li><strong>Iterate.</strong> I kept a list of what I'd change from using it, then from my friends, and shipped those changes the same day.</li>
       </ol>
-      <p><strong>I made the design calls.</strong> AI gave me options quickly. Deciding which ones were right was my job:</p>
+      <p><strong>Where I steered it.</strong></p>
       <ul>
-        <li>Brought it back to the problem mid-design ("remember the pain point I identified"), which led to doc links next to every assignment.</li>
-        <li>Replaced the first color scheme with my own.</li>
-        <li>Rejected a layout I didn't like, and brought back the summary bubble when it got removed.</li>
-        <li>Pushed dark mode through four rounds until it was true black and every heading was readable.</li>
-        <li>Caught that the computer Calendar link opened the phone version.</li>
-        <li>Chose what to change after testing, and what to keep.</li>
+        <li><strong>Kept the design anchored to the problem.</strong> Midway through, I pulled the work back to the core pain point, the scatter. That's why every assignment now has its doc one tap away.</li>
+        <li><strong>Set the visual direction.</strong> I replaced the default blue and lavender with sage, cream, and white, and picked a classic serif so the app feels calm and premium.</li>
+        <li><strong>Treated Home as the screen people see every day.</strong> I took the jar and summary through four layouts, rejected the ones that didn't work, and restored the summary bubble when it was lost along the way.</li>
+        <li><strong>Held dark mode to a high bar.</strong> Four rounds, until it was true black and every heading and icon was readable.</li>
+        <li><strong>Tested like a user.</strong> I caught that the Calendar link on a computer opened the phone layout.</li>
+        <li><strong>Owned the product decisions after testing.</strong> I chose what to change based on feedback, and what to keep on purpose.</li>
       </ul>
-      <p><strong>What it changed.</strong> Each design change came back in under two minutes, so I could try the jar in four places and dark mode four ways in one evening. The real app was online the next day, which meant I could test with real users instead of just showing a prototype.</p>
+      <p><strong>What it changed.</strong> Each design change came back in under two minutes, so I could try the jar in four places and dark mode four ways. The real app was online the next day, which meant I could test with real users instead of just showing a prototype.</p>
     </div>
   </section>
 
