@@ -634,3 +634,28 @@ html.brewing, html.brewing body { overflow: hidden; }
 .trio .shot.phone, .duo .shot.phone, .evolution .shot.phone, .shot.phone { aspect-ratio: 800 / 1739; border-radius: 14px; background: #000; }
 @media (max-width: 639px) { .trio figure:has(.shot.phone), .duo figure:has(.shot.phone), .evolution figure:has(.shot.phone) { max-width: 260px; margin-inline: auto; width: 100%; } }
 .solo-shot { max-width: 300px; } .solo-shot .shot { aspect-ratio: auto; }
+
+/* Grain: phone-sized placeholders (390x844 prototype), wide placeholders, insight-to-design pairs */
+.shot.placeholder.ph-phone { aspect-ratio: 390 / 844; border-radius: 14px; }
+.shot.placeholder.ph-wide { aspect-ratio: 16 / 7; }
+.shot.placeholder.ph-strip { aspect-ratio: 16 / 5; }
+@media (max-width: 639px) { .shot.placeholder.ph-wide, .shot.placeholder.ph-strip { aspect-ratio: auto; min-height: 160px; } }
+.shot.placeholder.ph-sketch { aspect-ratio: 4 / 3; }
+@media (max-width: 639px) { figure:has(.ph-phone) { max-width: 240px; margin-inline: auto; width: 100%; } }
+.duo.even { grid-template-columns: 1fr; }
+@media (min-width: 640px) { .duo.even { grid-template-columns: repeat(2, minmax(0, 250px)); justify-content: start; gap: 24px; } }
+.duo.phone-sketch { grid-template-columns: 1fr; }
+@media (min-width: 640px) { .duo.phone-sketch { grid-template-columns: minmax(0, 220px) minmax(0, 1fr); align-items: center; } }
+.pairs { display: flex; flex-direction: column; }
+.pair { display: grid; gap: 18px; grid-template-columns: 1fr; padding: 26px 0; border-top: 1.5px dotted var(--line); }
+@media (min-width: 700px) { .pair { grid-template-columns: minmax(0, 1fr) 210px; align-items: start; gap: 32px; } }
+.pair h3 { font-family: var(--f-body); font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
+.pair .heard { font-family: var(--f-mono); font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.pair .heard.made { color: var(--crema); margin-top: 14px; }
+.pair p + p { margin-top: 6px; }
+.findings { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .findings { grid-template-columns: 1fr 1fr; } }
+.findings li { border: 1.5px solid var(--line); background: var(--card); padding: 14px 16px; }
+.findings b { display: block; font-family: var(--f-display); font-size: var(--step-1); color: var(--crema); font-weight: 500; line-height: 1.1; margin-bottom: 4px; }
+.findings li.counter { border-style: dashed; }
+.ticket .t-total strong { text-align: right; }
