@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Grain · Fernando Quijada</title>
+<meta name="goatcounter" content="">
+<meta name="description" content="Case study: Grain, a concept for getting context on a short video without leaving the app. Built on 10 user interviews; I led the interactive prototype, designed with AI over about 80 versions.">
+<meta property="og:title" content="Grain · Fernando Quijada">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M5 9h22l-2 17q-.3 2-2.3 2H9.3Q7.3 28 7 26Z' fill='%233b2416'/%3E%3Cpath d='M5.6 14h20.8l-.4 4H6Z' fill='%23c9a07a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-drink="projects">
+
+<div class="cs-top">
+  <a class="back" href="../index.html#projects">← Back to your cortado</a>
+  <div class="theme-switch" role="group" aria-label="Color theme">
+    <button type="button" data-set-theme="light" aria-pressed="false">Latte</button>
+    <button type="button" data-set-theme="dark" aria-pressed="false">Espresso</button>
+  </div>
+</div>
+
+<main class="cs">
+
+  <div class="cs-hero">
+    <div>
+      <p class="label">Case study · Team project · Fall 2026</p>
+      <h1>Grain: context on a short video, without leaving the app</h1>
+      <p class="lede">When a clip feels off, checking it means leaving the app and sorting through results you may not trust. With my team, I interviewed 10 people about that moment. Then I led the design of Grain, an AI-powered plugin that shows a clip's claims, the sides, and the sources right where you're watching.</p>
+    </div>
+
+    <aside class="ticket" aria-label="Project summary">
+      <div class="t-head"><span>Order #079</span><span>Fall 2026</span></div>
+      <dl>
+        <dt>Project</dt><dd>Grain</dd>
+        <dt>Context</dt><dd>Team project, product management class, Fall 2026 <span class="todo">TODO: class name</span></dd>
+        <dt>Team</dt><dd>4</dd>
+        <dt>My role</dt><dd>Research, journey mapping, PRD; prototype lead</dd>
+        <dt>Tools</dt><dd>Claude Design, Claude</dd>
+        <dt>Timeline</dt><dd>Sept–Nov 2026</dd>
+      </dl>
+      <div class="t-total"><span>Total</span><strong>10 interviews → about 80 prototype versions in 3.5 weeks</strong></div>
+    </aside>
+  </div>
+
+  <div class="trio" style="margin-top:40px">
+    <figure>
+      <div class="shot placeholder ph-phone" role="img" aria-label="Grain's Context screen in the final dark liquid-glass design: the clip at the top, the claims it makes below, each labeled as a factual claim or an opinion, and the fact versus opinion meter">TODO: final Context screen (claims + meter)</div>
+      <figcaption><b>Context</b>What the clip claims, and how much of it is fact.</figcaption>
+    </figure>
+    <figure>
+      <div class="shot placeholder ph-phone" role="img" aria-label="Grain's Perspectives screen: common ground at the top, then left, center and right tabs, each with a short summary and its own source pills">TODO: final Perspectives screen</div>
+      <figcaption><b>Perspectives</b>Common ground first, then each side with its sources.</figcaption>
+    </figure>
+    <figure>
+      <div class="shot placeholder ph-phone" role="img" aria-label="Grain's Home tab: a serif greeting, The Daily Grain digest, Trending on Grain, and numbered suggested reads">TODO: final Home screen</div>
+      <figcaption><b>Home</b>The Daily Grain and what's trending. All content is sample data.</figcaption>
+    </figure>
+  </div>
+
+  <div class="tldr">
+    <p class="label">TL;DR</p>
+    <p>Short videos strip out context, and checking one means leaving the app, so most people don't. Grain gives you a clip's claims, the perspectives on it, and the sources behind each one without leaving the app. We interviewed 10 people and wrote the PRD as a team; I led the prototype and took it through about 80 versions with Claude Design.</p>
+  </div>
+
+  <section class="cs-section" aria-labelledby="problem-h">
+    <header><span class="label">01</span><h2 id="problem-h">The problem</h2></header>
+    <div class="cs-body">
+      <p>Short clips strip out context. To check one, you have to leave the app, write a search, and compare sources. Most people either never start or give up partway.</p>
+      <p class="callout">"A clip feels off. I either scroll past, or I leave TikTok, search Google or ChatGPT, open a few results, and still don't know which one to trust. It takes minutes, so I usually don't."</p>
+      <p style="font-size:.9rem;color:var(--muted)">A composite user voice my team wrote for the PRD from our interviews, not a direct quote.</p>
+      <p>Our journey map showed two places where people drop off:</p>
+      <ol class="flow">
+        <li><strong>Deciding to verify at all.</strong> Leaving the app often costs more than a passing doubt is worth.</li>
+        <li><strong>Deciding which result to trust</strong>, and when you've checked enough.</li>
+      </ol>
+      <figure style="margin-top:28px">
+        <div class="shot placeholder ph-wide" role="img" aria-label="Two user journey maps. Current state: see a provoking post, feel doubt, decide whether to verify or scroll past, choose Google or an AI tool, sort through results and decide what to trust, return to the feed, with the two friction points marked. Ideal: a one-tap check inside the app, a claim pulled from the post, and a layered result that goes from verdict to both sides to sources to a deeper dive">TODO: current vs. ideal journey map</div>
+        <figcaption><b>Current vs. ideal journey</b>The two friction points, and a layered result where each layer is a place you can stop.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="research-h">
+    <header><span class="label">02</span><h2 id="research-h">Research</h2></header>
+    <div class="cs-body">
+      <p><strong>We conducted 10 interviews:</strong> 6 college students and 4 working adults. They fell into two groups:</p>
+      <ul>
+        <li><strong>Skeptical verifiers (6).</strong> They already leave the app to check, find it slow, distrust what they find, and build multi-step routines around it.</li>
+        <li><strong>Passive scrollers (4).</strong> They take clips at face value and keep scrolling.</li>
+      </ul>
+      <ul class="findings" style="margin-top:22px">
+        <li><b>10 of 10</b>noticed bias in their feed. 6 were openly frustrated by it.</li>
+        <li><b>6 of 10</b>have a verification habit, and every one of them leaves the app to do it.</li>
+        <li><b>Sources or nothing</b>Several won't trust an AI answer without seeing its sources (Customers 6, 7, 9 and 10).</li>
+        <li><b>Built in</b>Customers 3 and 10 said a tool inside the app would be easier.</li>
+        <li class="counter"><b>Counter-evidence</b>Customer 2 said Google answers a yes-or-no question in about 10 seconds. Customer 1 distrusts plug-ins.</li>
+        <li class="counter"><b>Caveat</b>The sample is small and mostly US college students.</li>
+      </ul>
+      <p>A few things people told us shaped the design directly. Customer 9 wants to see "this is where I got this." Customer 5 rewrites her prompts to "ask a purified question" so the AI doesn't mirror her bias, and often agrees with neither side. Customer 7 said balanced sources are "few and far between," and called "AI" a trigger word for skepticism. Customer 3, on how they'd know the tool is trustworthy: "use it often, and if it fails, I'd stop." <span class="todo">TODO: check these quotes against the original interview notes before publishing</span></p>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="insight-h">
+    <header><span class="label">03</span><h2 id="insight-h">Key insight</h2></header>
+    <div class="cs-body">
+      <p class="callout">Doubt is real but brief. The barrier isn't caring about the truth. It's the cost of leaving the app at that moment, and then not knowing what to trust. People don't want to be told what to think. They want to see the sides and the sources, and decide for themselves.</p>
+      <p><span class="todo">TODO: Fernando's own wording of the insight</span></p>
+      <p>That's why our PRD made <strong>Perspectives</strong> the core of the product (P0), ahead of a straight fact check (P1).</p>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="design-h">
+    <header><span class="label">04</span><h2 id="design-h">From insight to design</h2></header>
+    <div class="cs-body wide">
+      <p style="max-width:68ch">The concept: share a clip to Grain, see the claims it makes, then pick a service: Fact Check, Perspectives, or Stay Up to Date. Here's how what we heard turned into what I designed.</p>
+      <div class="pairs">
+        <div class="pair">
+          <div>
+            <p class="heard">What we heard</p>
+            <h3>No sources, no trust in an AI answer.</h3>
+            <p>Four of the ten said this in some form, and Customer 9 asked for "this is where I got this."</p>
+            <p class="heard made">What I designed</p>
+            <p>A separate <strong>"Where this answer comes from"</strong> section under every answer, instead of sources hidden in the text. Later, my team asked for smaller sources. I made them compact pills, but kept them tappable, because visible sources are what earn trust.</p>
+          </div>
+          <figure><div class="shot placeholder ph-phone" role="img" aria-label="An answer card in Grain with a separate section titled Where this answer comes from, listing compact, tappable source pills, one marked with a heart as a loved source">TODO: sources section</div></figure>
+        </div>
+        <div class="pair">
+          <div>
+            <p class="heard">What we heard</p>
+            <h3>People often agree with neither side, and want to judge for themselves.</h3>
+            <p>Customer 5 often agrees with neither side, and Customer 7 struggles to find balanced sources.</p>
+            <p class="heard made">What I designed</p>
+            <p><strong>Perspectives</strong> opens with the common ground, then lets you switch between left, center and right. Each side has its own short summary and its own sources, so you compare them yourself.</p>
+          </div>
+          <figure><div class="shot placeholder ph-phone" role="img" aria-label="Grain's Perspectives screen: a common ground summary at the top, then left, center and right tabs, each showing a summary and its own sources">TODO: Perspectives screen</div></figure>
+        </div>
+        <div class="pair">
+          <div>
+            <p class="heard">What we heard</p>
+            <h3>Don't tell me what to think.</h3>
+            <p>People want the facts checked, but not their opinions graded.</p>
+            <p class="heard made">What I designed</p>
+            <p>Every claim is labeled as a factual claim or an opinion, and a <strong>fact vs. opinion meter</strong> shows the mix in the clip. Grain gives a verdict on factual claims only. It never calls an opinion true or false.</p>
+          </div>
+          <figure><div class="shot placeholder ph-phone" role="img" aria-label="Grain's claims list, with each claim tagged Factual claim or Opinion, and a meter showing how much of the clip is fact and how much is opinion">TODO: claims + fact/opinion meter</div></figure>
+        </div>
+        <div class="pair">
+          <div>
+            <p class="heard">What our professor said</p>
+            <h3>Doubt is the trigger, so reward it.</h3>
+            <p>This reframed our first friction point. The moment of doubt isn't a problem to remove. It's the behavior we want more of.</p>
+            <p class="heard made">What I designed</p>
+            <p>When you send a clip, Grain answers <strong>"Good instinct. You were right to pause."</strong> A running count ("Sharp eye: 5 shaky clips caught this week") makes checking feel like a habit worth keeping.</p>
+          </div>
+          <figure><div class="shot placeholder ph-phone" role="img" aria-label="Grain's skepticism reward: the message Good instinct. You were right to pause, with a Sharp eye count of shaky clips caught this week">TODO: skepticism reward</div></figure>
+        </div>
+      </div>
+      <div class="duo phone-sketch" style="margin-top:28px">
+        <figure><div class="shot placeholder ph-phone" role="img" aria-label="Grain's final app with four tabs along the bottom: Home, Context, Connect and Profile">TODO: final four-tab screen</div></figure>
+        <figure><div class="shot placeholder ph-sketch" role="img" aria-label="My team's whiteboard sketch of the app, with four tabs: Home, Context, Connect and Profile">TODO: team whiteboard sketch</div>
+          <figcaption><b>From the whiteboard</b>My first version was a single flow. My team sketched a four-tab app (Home, Context, Connect, Profile), and I rebuilt the prototype around it.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="ai-wrong-h">
+    <header><span class="label">05</span><h2 id="ai-wrong-h">Designing for AI being wrong</h2></header>
+    <div class="cs-body">
+      <p>An AI that explains the news will sometimes be wrong. Our research said trust is earned slowly and lost fast ("if it fails, I'd stop"), so we wrote the rules into the PRD and I designed for them:</p>
+      <ul>
+        <li><strong>No source, no sentence.</strong> Every claim in an answer needs a source. A verdict needs at least 2 independent sources, and each side in Perspectives links to at least 2 articles.</li>
+        <li><strong>Saying "I don't know."</strong> When coverage is thin, Grain says "Not enough reliable coverage yet" instead of filling the gap. Clips with no speech fall back to the caption and on-screen text, and say so. Errors get a clear retry. <span class="todo">TODO: confirm these states are in the prototype before showing them</span></li>
+        <li><strong>Room to push back.</strong> Every card has thumbs up or down, a trust rating, and "Report a problem." Reporting asks for a reason, so a person reviewing it knows what went wrong.</li>
+      </ul>
+      <div class="duo even" style="margin-top:24px">
+        <figure><div class="shot placeholder ph-phone" role="img" aria-label="Grain's report flow: after tapping Report a problem, a list of reasons to choose from">TODO: report flow</div>
+          <figcaption><b>Report with a reason</b>Instead of a single button.</figcaption></figure>
+        <figure><div class="shot placeholder ph-phone" role="img" aria-label="Grain's share sheet for sending a context card to friends">TODO: share sheet</div>
+          <figcaption><b>Share the context</b>Send a Grain report to a friend.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="visual-h">
+    <header><span class="label">06</span><h2 id="visual-h">Visual direction and iterations</h2></header>
+    <div class="cs-body wide">
+      <ol class="steps">
+        <li class="pivot"><div><h3>The name, then the logo</h3>
+          <p>Grain comes from "take it with a grain of salt." The logo started as an ear of wheat and went through slimmer, multiple-ear, arc and round versions. But the name is about a grain of salt, so I switched to salt, starting from my own reference photo. The final logo is a frosted tile with a 3D salt crystal. The first crystal looked too perfect, so I made it irregular.</p></div></li>
+        <li><div><h3>Light, then dark, then liquid glass</h3>
+          <p>The first prototype was light. I moved to dark, with black, white and turquoise, and applied it app-wide so screens didn't jump from black to white. Then I built a dark "liquid glass" background from a blurred image I brought in. A lighter version stopped looking like glass, so I rebuilt the colors. I also tried light, warm amber, and ink &amp; paper themes, and each time went back to dark glass.</p></div></li>
+        <li class="pivot"><div><h3>The "less AI-like" pass</h3>
+          <p>An early version looked like every AI app: pills and stacked cards. Because my team plans to keep working on Grain after the class, I wanted it to feel like its own product. I removed the pills and stacked cards and gave it an editorial look: hairlines, serif headlines in EB Garamond, Inter for body text, and more space. Later, my team asked me to drop the "techie" monospace labels, and I did.</p></div></li>
+        <li><div><h3>Motion that means something</h3>
+          <p>While Grain checks a clip, grains of salt fall. The daily digest opens as a crumpled newspaper that unfolds into The Daily Grain. Tapping the logo sets off a shower of salt.</p></div></li>
+      </ol>
+      <figure style="margin-top:28px">
+        <div class="shot placeholder ph-strip" role="img" aria-label="Logo evolution strip, left to right: a wheat ear, a slimmer wheat ear, multiple ears, an arc, a round mark, and the final frosted tile with an irregular 3D salt crystal">TODO: logo evolution strip (wheat → salt)</div>
+        <figcaption><b>Wheat → salt</b>From a literal grain to "a grain of salt."</figcaption>
+      </figure>
+      <div class="duo even" style="margin-top:28px">
+        <figure><div class="shot placeholder ph-phone" role="img" aria-label="Version 1 of Grain's Context screen: light background, the claims list and three service choices">TODO: v1 Context screen (light)</div>
+          <figcaption><b>Version 1</b>Light, straight from the PRD.</figcaption></figure>
+        <figure><div class="shot placeholder ph-phone" role="img" aria-label="Version 79 of Grain's Context screen: dark liquid glass, serif headline, claims with fact or opinion labels, and the meter">TODO: v79 Context screen (final)</div>
+          <figcaption><b>Version 79</b>Dark liquid glass, editorial type.</figcaption></figure>
+      </div>
+      <div class="duo even" style="margin-top:28px">
+        <figure><div class="shot placeholder ph-phone" role="img" aria-label="Before the editorial pass: Grain's screen with rounded pills and stacked cards">TODO: before the "less AI-like" pass</div>
+          <figcaption><b>Before</b>Pills and stacked cards.</figcaption></figure>
+        <figure><div class="shot placeholder ph-phone" role="img" aria-label="After the editorial pass: the same screen with hairline dividers, serif headlines and more spacing">TODO: after the "less AI-like" pass</div>
+          <figcaption><b>After</b>Hairlines, serif headlines, space.</figcaption></figure>
+      </div>
+      <div class="trio" style="margin-top:28px">
+        <figure><div class="shot placeholder ph-phone" role="img" aria-label="GIF of grains of salt falling while Grain checks a clip">GIF: falling-salt loader</div>
+          <figcaption><b>Loading</b>Salt falls while Grain checks the clip.</figcaption></figure>
+        <figure><div class="shot placeholder ph-phone" role="img" aria-label="GIF of a crumpled newspaper ball unfolding into The Daily Grain digest">GIF: newspaper → The Daily Grain</div>
+          <figcaption><b>The Daily Grain</b>A crumpled newspaper unfolds into the digest.</figcaption></figure>
+        <figure><div class="shot placeholder ph-phone" role="img" aria-label="GIF of switching between the left, center and right sides in Perspectives, with each side's sources changing">GIF: Perspectives side switching</div>
+          <figcaption><b>Perspectives</b>Switching sides, each with its own sources.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="feedback-h">
+    <header><span class="label">07</span><h2 id="feedback-h">Feedback → changes</h2></header>
+    <div class="cs-body wide">
+      <p style="max-width:68ch">After a meeting with our professor and one with my team, I listed every piece of feedback, then decided what to build, what to adapt, and what to leave out.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>From</th><th>What I heard</th><th>What I did</th><th>Why</th></tr></thead>
+          <tbody>
+            <tr><td>Professor</td><td>Skepticism is the trigger, so reward it.</td><td><strong>Built</strong> "Good instinct. You were right to pause." and a weekly "Sharp eye" count.</td><td>Rewards the moment of doubt, our first friction point.</td></tr>
+            <tr><td>Professor</td><td>Show a needle for fact vs. opinion.</td><td><strong>Built</strong> the fact vs. opinion meter.</td><td>Backs up our rule of no verdicts on opinions.</td></tr>
+            <tr><td>Professor</td><td>Let people share a "grain report" with friends.</td><td><strong>Built</strong> a share sheet.</td><td>People want to discuss the news with friends and family (Customer 7).</td></tr>
+            <tr><td>Professor</td><td>Let users report problems in detail.</td><td><strong>Built</strong> a report flow with reasons.</td><td>Our PRD calls for human review, and a reason tells the reviewer what went wrong.</td></tr>
+            <tr><td>Professor</td><td>Add topic communities.</td><td><strong>Built</strong> "What people are saying" communities, replacing "Recommended for you."</td><td>People want to discuss news intelligently (Customer 7).</td></tr>
+            <tr><td>Team</td><td>Make sources smaller.</td><td><strong>Built</strong> compact source pills that stay tappable.</td><td>Less clutter, without hiding what earns trust.</td></tr>
+            <tr><td>Team</td><td>Suggest friends like Instagram does; drop the inbox.</td><td><strong>Built</strong> a friends carousel with red unread dots, and chat.</td><td>A familiar pattern, and unread dots replace a separate inbox.</td></tr>
+            <tr class="win"><td>Team</td><td>Use profile photos.</td><td><strong>Adapted:</strong> illustrated avatars instead.</td><td>Real photos would need people's consent.</td></tr>
+            <tr class="win"><td>Professor</td><td>Help people clean up their feed.</td><td><strong>Not built.</strong></td><td>The point of Grain is to keep seeing different perspectives, not filter them out.</td></tr>
+            <tr><td>Professor</td><td>Let people see their friends' algorithms.</td><td><strong>Not built.</strong></td><td>Our professor was lukewarm on it too.</td></tr>
+            <tr><td>Professor</td><td>Show "what your algorithm served you today" through screen monitoring.</td><td><strong>Parked</strong> for a later version.</td><td>Saved for a later iteration, outside the core flow.</td></tr>
+            <tr><td>Me</td><td>Show what's trending today on Home.</td><td><strong>Built</strong> "Trending on Grain."</td><td>My own addition while working through the list.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="lessons" style="margin-top:28px">
+        <div class="lesson"><h3>Trade-off: smaller sources vs. trust</h3>
+          <p>My team wanted less on screen. The interviews said visible sources are what earn trust. I shrank the sources into compact pills but kept every one tappable.</p></div>
+        <div class="lesson"><h3>Trade-off: red and blue vs. colorblind users</h3>
+          <p>My team asked for the familiar red and blue for the sides, so I used thick percentage bars and swapped orange for burgundy. Red and blue alone are hard to tell apart for some colorblind users. <span class="todo">TODO: what non-color cue (labels, patterns) is used</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="ai-h">
+    <header><span class="label">08</span><h2 id="ai-h">Prototyping fast with AI</h2></header>
+    <div class="cs-body">
+      <p>I used Claude Design to turn our PRD into a clickable prototype, then kept iterating on it. Over about 3.5 weeks it went through <strong>about 80 versions</strong>. After our professor and team meetings, I implemented a full round of about 22 feedback items in one session.</p>
+      <p><strong>How I worked.</strong> I brought references: photos of wheat and salt, apps I admire (Wispr Flow, GitLab, GitHub), a blurred image for the glass background, a crumpled newspaper, and my team's whiteboard sketch. I described what I wanted in plain words, like "sleek, techy, elegant" and "creative transitions, not AI slop." Then I tried directions, kept what worked, and reverted what didn't. For the meeting feedback, I had the full list written out first, then chose which items to build.</p>
+      <p><strong>Three examples of fast exploration:</strong></p>
+      <ul>
+        <li><strong>The logo.</strong> I took the wheat logo through four rounds, saw that it didn't carry the name's meaning, and moved to a grain of salt using my own reference photo.</li>
+        <li><strong>The themes.</strong> I tried light, warm amber, and ink &amp; paper against the dark glass. Before trying ink &amp; paper, I saved the working version, so going back cost nothing.</li>
+        <li><strong>The "less AI-like" redesign.</strong> I called out the generic AI-app look and rebuilt the screens in an editorial style.</li>
+      </ul>
+      <p><strong>What it changed.</strong> Because each version was a working, clickable prototype, my team and our professor reacted to something they could tap, not a static mockup. Trying a direction was cheap, so I could push the design further and still go back.</p>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="status-h">
+    <header><span class="label">09</span><h2 id="status-h">Where it stands</h2></header>
+    <div class="cs-body">
+      <p>Grain is an interactive prototype built on our research, with a PRD and journey maps behind it. It hasn't shipped, and we haven't tested it with users yet. The prototype runs on sample content (the clip, sources, counts, friends and chats are all placeholders), not a live AI. The success metrics in our PRD are targets for a future pilot, not results.</p>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="next-h">
+    <header><span class="label">10</span><h2 id="next-h">What I learned and what's next</h2></header>
+    <div class="cs-body wide">
+      <div class="lessons">
+        <div class="lesson"><h3>Design the "I don't know" too</h3>
+          <p>For an AI product, the moments where it can't answer matter as much as the answers. Rules like "no source, no sentence" became design decisions, not just policy.</p></div>
+        <div class="lesson"><h3>Research is a filter for feedback</h3>
+          <p>When feedback pulled in different directions, like smaller sources or a cleaner feed, the interviews told me what to keep and what to say no to.</p></div>
+        <div class="lesson"><h3>A clickable prototype moves a team</h3>
+          <p>Working versions got my team and our professor reacting to real interactions, and their feedback got sharper as a result.</p></div>
+      </div>
+      <p style="max-width:68ch"><strong>Next: usability testing.</strong> Have a few people check a clip their usual way, then with the prototype, and compare the time it takes and how they react.</p>
+      <p style="max-width:68ch">After that, from our PRD: a moderated time-to-context test, a 2-week pilot with 20 users, and sharing a clip to Grain straight from TikTok.</p>
+    </div>
+  </section>
+
+  <div class="next-up">
+    <a class="back" href="../index.html#projects">← Back to your cortado</a>
+    <a class="back" href="../index.html#menu">Change order</a>
+  </div>
+</main>
+
+<div class="sip">
+  <div class="sip-meta" aria-hidden="true">
+    <span class="label" data-cup-pct>100% left</span>
+    <span class="status" data-cup-status>Scroll to sip</span>
+  </div>
+  <button class="cup-btn" type="button" data-cup aria-label="Your cortado. Tap for a coffee fact or a fact about Fernando."></button>
+</div>
+
+<dialog class="lb" aria-label="Enlarged image">
+  <button type="button">Close</button>
+  <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">
+  <p></p>
+</dialog>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
