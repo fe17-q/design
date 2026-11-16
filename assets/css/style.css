@@ -665,3 +665,4 @@ html.brewing, html.brewing body { overflow: hidden; }
 .pair .shot:not(.placeholder):not(.g-phone) { border-radius: 10px; background: #000; }
 @media (min-width: 700px) { .pair.crop { grid-template-columns: minmax(0, 1fr) 330px; } }
 @media (min-width: 700px) { .pair.text-only { grid-template-columns: minmax(0, 1fr); max-width: 68ch; } }
+@media (min-width: 700px) { .pair.tall { grid-template-columns: minmax(0, 1fr) 280px; } }
