@@ -36,7 +36,7 @@
       <div class="t-head"><span>Order #079</span><span>Fall 2026</span></div>
       <dl>
         <dt>Project</dt><dd>Grain</dd>
-        <dt>Context</dt><dd>Team project, product management class, Fall 2026 <span class="todo">TODO: class name</span></dd>
+        <dt>Context</dt><dd>Team project, Fall 2026</dd>
         <dt>Team</dt><dd>4</dd>
         <dt>My role</dt><dd>Research, journey mapping, PRD; prototype lead</dd>
         <dt>Tools</dt><dd>Claude Design, Claude</dd>
@@ -107,8 +107,7 @@
   <section class="cs-section" aria-labelledby="insight-h">
     <header><span class="label">03</span><h2 id="insight-h">Key insight</h2></header>
     <div class="cs-body">
-      <p class="callout">Doubt is real but brief. The barrier isn't caring about the truth. It's the cost of leaving the app at that moment, and then not knowing what to trust. People don't want to be told what to think. They want to see the sides and the sources, and decide for themselves.</p>
-      <p><span class="todo">TODO: Fernando's own wording of the insight</span></p>
+      <p class="callout">People do doubt what they see. But the doubt lasts seconds, and checking costs minutes: leave the app, search, then figure out which answer to trust. And they don't want a verdict. They want to see the sides and the sources, and decide for themselves.</p>
       <p>That's why our PRD made <strong>Perspectives</strong> the core of the product (P0), ahead of a straight fact check (P1).</p>
     </div>
   </section>
@@ -150,7 +149,7 @@
         </div>
         <div class="pair">
           <div>
-            <p class="heard">What our professor said</p>
+            <p class="heard">What our advisor said</p>
             <h3>Doubt is the trigger, so reward it.</h3>
             <p>This reframed our first friction point. The moment of doubt isn't a problem to remove. It's the behavior we want more of.</p>
             <p class="heard made">What I designed</p>
@@ -173,7 +172,6 @@
       <p>An AI that explains the news will sometimes be wrong. Our research said trust is earned slowly and lost fast ("if it fails, I'd stop"), so we wrote the rules into the PRD and I designed for them:</p>
       <ul>
         <li><strong>No source, no sentence.</strong> Every claim in an answer needs a source. A verdict needs at least 2 independent sources, and each side in Perspectives links to at least 2 articles.</li>
-        <li><strong>Saying "I don't know."</strong> When coverage is thin, Grain says "Not enough reliable coverage yet" instead of filling the gap. Clips with no speech fall back to the caption and on-screen text, and say so. Errors get a clear retry. <span class="todo">TODO: confirm these states are in the prototype before showing them</span></li>
         <li><strong>Room to push back.</strong> Every card has thumbs up or down, a trust rating, and "Report a problem." Reporting asks for a reason, so a person reviewing it knows what went wrong.</li>
       </ul>
       <div class="duo even" style="margin-top:24px">
@@ -194,7 +192,7 @@
         <li><div><h3>Light, then dark, then liquid glass</h3>
           <p>The first prototype was light. I moved to dark, with black, white and turquoise, and applied it app-wide so screens didn't jump from black to white. Then I built a dark "liquid glass" background from a blurred image I brought in. A lighter version stopped looking like glass, so I rebuilt the colors. I also tried light, warm amber, and ink &amp; paper themes, and each time went back to dark glass.</p></div></li>
         <li class="pivot"><div><h3>The "less AI-like" pass</h3>
-          <p>An early version looked like every AI app: pills and stacked cards. Because my team plans to keep working on Grain after the class, I wanted it to feel like its own product. I removed the pills and stacked cards and gave it an editorial look: hairlines, serif headlines in EB Garamond, Inter for body text, and more space. Later, my team asked me to drop the "techie" monospace labels, and I did.</p></div></li>
+          <p>An early version looked like every AI app: pills and stacked cards. Because my team plans to keep working on Grain beyond this project, I wanted it to feel like its own product. I removed the pills and stacked cards and gave it an editorial look: hairlines, serif headlines in EB Garamond, Inter for body text, and more space. Later, my team asked me to drop the "techie" monospace labels, and I did.</p></div></li>
         <li><div><h3>Motion that means something</h3>
           <p>While Grain checks a clip, grains of salt fall. The daily digest opens as a crumpled newspaper that unfolds into The Daily Grain. Tapping the logo sets off a shower of salt.</p></div></li>
       </ol>
@@ -228,22 +226,22 @@
   <section class="cs-section" aria-labelledby="feedback-h">
     <header><span class="label">07</span><h2 id="feedback-h">Feedback → changes</h2></header>
     <div class="cs-body wide">
-      <p style="max-width:68ch">After a meeting with our professor and one with my team, I listed every piece of feedback, then decided what to build, what to adapt, and what to leave out.</p>
+      <p style="max-width:68ch">After a meeting with our advisor and one with my team, I listed every piece of feedback, then decided what to build, what to adapt, and what to leave out.</p>
       <div class="table-wrap">
         <table>
           <thead><tr><th>From</th><th>What I heard</th><th>What I did</th><th>Why</th></tr></thead>
           <tbody>
-            <tr><td>Professor</td><td>Skepticism is the trigger, so reward it.</td><td><strong>Built</strong> "Good instinct. You were right to pause." and a weekly "Sharp eye" count.</td><td>Rewards the moment of doubt, our first friction point.</td></tr>
-            <tr><td>Professor</td><td>Show a needle for fact vs. opinion.</td><td><strong>Built</strong> the fact vs. opinion meter.</td><td>Backs up our rule of no verdicts on opinions.</td></tr>
-            <tr><td>Professor</td><td>Let people share a "grain report" with friends.</td><td><strong>Built</strong> a share sheet.</td><td>People want to discuss the news with friends and family (Customer 7).</td></tr>
-            <tr><td>Professor</td><td>Let users report problems in detail.</td><td><strong>Built</strong> a report flow with reasons.</td><td>Our PRD calls for human review, and a reason tells the reviewer what went wrong.</td></tr>
-            <tr><td>Professor</td><td>Add topic communities.</td><td><strong>Built</strong> "What people are saying" communities, replacing "Recommended for you."</td><td>People want to discuss news intelligently (Customer 7).</td></tr>
+            <tr><td>Advisor</td><td>Skepticism is the trigger, so reward it.</td><td><strong>Built</strong> "Good instinct. You were right to pause." and a weekly "Sharp eye" count.</td><td>Rewards the moment of doubt, our first friction point.</td></tr>
+            <tr><td>Advisor</td><td>Show a needle for fact vs. opinion.</td><td><strong>Built</strong> the fact vs. opinion meter.</td><td>Backs up our rule of no verdicts on opinions.</td></tr>
+            <tr><td>Advisor</td><td>Let people share a "grain report" with friends.</td><td><strong>Built</strong> a share sheet.</td><td>People want to discuss the news with friends and family (Customer 7).</td></tr>
+            <tr><td>Advisor</td><td>Let users report problems in detail.</td><td><strong>Built</strong> a report flow with reasons.</td><td>Our PRD calls for human review, and a reason tells the reviewer what went wrong.</td></tr>
+            <tr><td>Advisor</td><td>Add topic communities.</td><td><strong>Built</strong> "What people are saying" communities, replacing "Recommended for you."</td><td>People want to discuss news intelligently (Customer 7).</td></tr>
             <tr><td>Team</td><td>Make sources smaller.</td><td><strong>Built</strong> compact source pills that stay tappable.</td><td>Less clutter, without hiding what earns trust.</td></tr>
             <tr><td>Team</td><td>Suggest friends like Instagram does; drop the inbox.</td><td><strong>Built</strong> a friends carousel with red unread dots, and chat.</td><td>A familiar pattern, and unread dots replace a separate inbox.</td></tr>
             <tr class="win"><td>Team</td><td>Use profile photos.</td><td><strong>Adapted:</strong> illustrated avatars instead.</td><td>Real photos would need people's consent.</td></tr>
-            <tr class="win"><td>Professor</td><td>Help people clean up their feed.</td><td><strong>Not built.</strong></td><td>The point of Grain is to keep seeing different perspectives, not filter them out.</td></tr>
-            <tr><td>Professor</td><td>Let people see their friends' algorithms.</td><td><strong>Not built.</strong></td><td>Our professor was lukewarm on it too.</td></tr>
-            <tr><td>Professor</td><td>Show "what your algorithm served you today" through screen monitoring.</td><td><strong>Parked</strong> for a later version.</td><td>Saved for a later iteration, outside the core flow.</td></tr>
+            <tr class="win"><td>Advisor</td><td>Help people clean up their feed.</td><td><strong>Not built.</strong></td><td>The point of Grain is to keep seeing different perspectives, not filter them out.</td></tr>
+            <tr><td>Advisor</td><td>Let people see their friends' algorithms.</td><td><strong>Not built.</strong></td><td>Our advisor was lukewarm on it too.</td></tr>
+            <tr><td>Advisor</td><td>Show "what your algorithm served you today" through screen monitoring.</td><td><strong>Parked</strong> for a later version.</td><td>Saved for a later iteration, outside the core flow.</td></tr>
             <tr><td>Me</td><td>Show what's trending today on Home.</td><td><strong>Built</strong> "Trending on Grain."</td><td>My own addition while working through the list.</td></tr>
           </tbody>
         </table>
@@ -252,7 +250,7 @@
         <div class="lesson"><h3>Trade-off: smaller sources vs. trust</h3>
           <p>My team wanted less on screen. The interviews said visible sources are what earn trust. I shrank the sources into compact pills but kept every one tappable.</p></div>
         <div class="lesson"><h3>Trade-off: red and blue vs. colorblind users</h3>
-          <p>My team asked for the familiar red and blue for the sides, so I used thick percentage bars and swapped orange for burgundy. Red and blue alone are hard to tell apart for some colorblind users. <span class="todo">TODO: what non-color cue (labels, patterns) is used</span></p></div>
+          <p>My team asked for the familiar red and blue for the sides, so I used thick percentage bars and swapped orange for burgundy. Red and blue alone are hard to tell apart for some colorblind users. Adding a cue beyond color, like labels or patterns, is next on my list.</p></div>
       </div>
     </div>
   </section>
@@ -260,7 +258,7 @@
   <section class="cs-section" aria-labelledby="ai-h">
     <header><span class="label">08</span><h2 id="ai-h">Prototyping fast with AI</h2></header>
     <div class="cs-body">
-      <p>I used Claude Design to turn our PRD into a clickable prototype, then kept iterating on it. Over about 3.5 weeks it went through <strong>about 80 versions</strong>. After our professor and team meetings, I implemented a full round of about 22 feedback items in one session.</p>
+      <p>I used Claude Design to turn our PRD into a clickable prototype, then kept iterating on it. Over about 3.5 weeks it went through <strong>about 80 versions</strong>. After our advisor and team meetings, I implemented a full round of about 22 feedback items in one session.</p>
       <p><strong>How I worked.</strong> I brought references: photos of wheat and salt, apps I admire (Wispr Flow, GitLab, GitHub), a blurred image for the glass background, a crumpled newspaper, and my team's whiteboard sketch. I described what I wanted in plain words, like "sleek, techy, elegant" and "creative transitions, not AI slop." Then I tried directions, kept what worked, and reverted what didn't. For the meeting feedback, I had the full list written out first, then chose which items to build.</p>
       <p><strong>Three examples of fast exploration:</strong></p>
       <ul>
@@ -268,7 +266,7 @@
         <li><strong>The themes.</strong> I tried light, warm amber, and ink &amp; paper against the dark glass. Before trying ink &amp; paper, I saved the working version, so going back cost nothing.</li>
         <li><strong>The "less AI-like" redesign.</strong> I called out the generic AI-app look and rebuilt the screens in an editorial style.</li>
       </ul>
-      <p><strong>What it changed.</strong> Because each version was a working, clickable prototype, my team and our professor reacted to something they could tap, not a static mockup. Trying a direction was cheap, so I could push the design further and still go back.</p>
+      <p><strong>What it changed.</strong> Because each version was a working, clickable prototype, my team and our advisor reacted to something they could tap, not a static mockup. Trying a direction was cheap, so I could push the design further and still go back.</p>
     </div>
   </section>
 
@@ -283,12 +281,12 @@
     <header><span class="label">10</span><h2 id="next-h">What I learned and what's next</h2></header>
     <div class="cs-body wide">
       <div class="lessons">
-        <div class="lesson"><h3>Design the "I don't know" too</h3>
-          <p>For an AI product, the moments where it can't answer matter as much as the answers. Rules like "no source, no sentence" became design decisions, not just policy.</p></div>
+        <div class="lesson"><h3>With AI, trust is a design problem</h3>
+          <p>For an AI product, showing where an answer comes from matters as much as the answer. Rules like "no source, no sentence" became design decisions, not just policy.</p></div>
         <div class="lesson"><h3>Research is a filter for feedback</h3>
           <p>When feedback pulled in different directions, like smaller sources or a cleaner feed, the interviews told me what to keep and what to say no to.</p></div>
         <div class="lesson"><h3>A clickable prototype moves a team</h3>
-          <p>Working versions got my team and our professor reacting to real interactions, and their feedback got sharper as a result.</p></div>
+          <p>Working versions got my team and our advisor reacting to real interactions, and their feedback got sharper as a result.</p></div>
       </div>
       <p style="max-width:68ch"><strong>Next: usability testing.</strong> Have a few people check a clip their usual way, then with the prototype, and compare the time it takes and how they react.</p>
       <p style="max-width:68ch">After that, from our PRD: a moderated time-to-context test, a 2-week pilot with 20 users, and sharing a clip to Grain straight from TikTok.</p>
