@@ -641,3 +641,71 @@ html.brewing, html.brewing body { overflow: hidden; }
 .card-facts dd { margin: 0; }
 @media (max-width: 420px) { .card-facts { grid-template-columns: 1fr; gap: 2px; } .card-facts dd { margin-bottom: 8px; } }
 .menu-intro { max-width: 54ch; color: var(--muted); line-height: 1.55; }
+
+/* =========================================================
+   Menu v2: wooden plank wall menu with floating doodles
+   ========================================================= */
+:root { --wall-glow: rgba(255, 244, 222, .55); --wall: #f7f0e4; --wall-ink: #2b1b12; --wall-muted: #7a6553; --wood-a: #d8b183; --wood-b: #c4935f; --wood-c: #b07f4d; --wood-edge: #8c5f36; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --wall-glow: rgba(226, 168, 98, .05); --wall: #20170f; --wall-ink: #f3e9da; --wall-muted: #b9a28b; --wood-a: #8a6240; --wood-b: #73502f; --wood-c: #5f4127; --wood-edge: #3e2a19; } }
+:root[data-theme="dark"] { --wall-glow: rgba(226, 168, 98, .05); --wall: #20170f; --wall-ink: #f3e9da; --wall-muted: #b9a28b; --wood-a: #8a6240; --wood-b: #73502f; --wood-c: #5f4127; --wood-edge: #3e2a19; }
+
+.menu-view { overflow-x: clip; }
+.menu-stage { position: relative; }
+.board-card.planks {
+  position: relative; z-index: 1;
+  background:
+    radial-gradient(120% 90% at 85% 0%, var(--wall-glow), transparent 60%),
+    var(--wall);
+  color: var(--wall-ink);
+  box-shadow: inset 0 0 0 1px var(--line), 0 18px 40px rgba(29, 20, 15, .14);
+  padding: 30px clamp(20px, 5vw, 48px) 26px;
+}
+.board-card.planks .board-card-head { align-items: center; text-align: center; margin-bottom: 8px; }
+.board-card.planks h2 { font-style: normal; font-weight: 700; letter-spacing: .02em; }
+.board-card.planks .label { color: var(--wall-muted); }
+.planks .drinks li + li { border-top: 0; }
+.planks .drinks li { position: relative; padding-bottom: 14px; }
+/* the wooden stick each drink sits on */
+.planks .drinks li::after {
+  content: ""; position: absolute; left: -6px; right: -6px; bottom: 3px; height: 14px; border-radius: 3px;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 22%, rgba(0,0,0,.06) 22% 22.4%, transparent 22.4% 61%, rgba(255,255,255,.08) 61% 61.5%, transparent 61.5% 100%),
+    repeating-linear-gradient(178deg, rgba(255,255,255,.10) 0 1px, transparent 1px 4px),
+    linear-gradient(180deg, var(--wood-a), var(--wood-b) 55%, var(--wood-c));
+  box-shadow: 0 1px 0 var(--wood-edge), 0 6px 8px -4px rgba(29, 20, 15, .35);
+  pointer-events: none;
+}
+.planks .drink { color: var(--wall-ink); padding-block: 12px 8px; }
+.planks .drink:hover, .planks .drink:focus-visible { background: transparent; color: var(--wall-ink); }
+.planks .drink:hover .drink-name { color: var(--crema); }
+.planks .drink-name { font-weight: 800; text-transform: uppercase; letter-spacing: .03em; font-size: 1.35rem; transition: color .2s ease; }
+.planks .drink-desc { color: var(--wall-muted); }
+.planks .drink-dots { border-bottom-color: transparent !important; }
+.planks .drink-section { color: var(--crema); }
+
+/* floating doodles around the menu */
+.doodles { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.doodle { position: absolute; fill: none; stroke: var(--crema); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; opacity: .8; animation: bob 6s ease-in-out infinite; }
+.doodle circle[r="1.6"] { fill: var(--crema); stroke: none; }
+.d-mug { width: 78px; top: -34px; right: -96px; animation-delay: -1s; }
+.d-croissant { width: 92px; top: 34%; left: -116px; animation-delay: -3s; }
+.d-runner { width: 74px; bottom: 6%; right: -100px; animation: run-bob 1.1s ease-in-out infinite; }
+.d-muffin { width: 64px; bottom: -30px; left: -82px; animation-delay: -2s; }
+.d-beans { width: 52px; top: -22px; left: -64px; animation-delay: -4s; }
+.d-donut { width: 60px; top: 46%; right: -84px; animation-delay: -5s; }
+.d-runner .speed { opacity: .6; }
+.steam { animation: steam 2.6s ease-in-out infinite; opacity: 0; }
+.steam.s2 { animation-delay: .5s; } .steam.s3 { animation-delay: 1s; }
+@keyframes bob { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-10px) rotate(3deg); } }
+@keyframes run-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes steam { 0% { opacity: 0; transform: translateY(6px); } 40% { opacity: .9; } 100% { opacity: 0; transform: translateY(-10px); } }
+/* narrower screens: fewer, smaller doodles that peek in at the edges */
+@media (max-width: 1060px) {
+  .d-croissant, .d-donut { display: none; }
+  .d-mug { width: 58px; top: -46px; right: 6px; }
+  .d-beans { width: 40px; top: -36px; left: 4px; }
+  .d-runner { width: 54px; bottom: -44px; right: 10px; }
+  .d-muffin { width: 46px; bottom: -40px; left: 8px; }
+  .menu-stage { margin-block: 40px 40px; }
+}
+@media (prefers-reduced-motion: reduce) { .doodle, .steam { animation: none; } .steam { opacity: .7; } }
