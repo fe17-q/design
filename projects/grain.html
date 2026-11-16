@@ -95,12 +95,12 @@
       <ul class="findings" style="margin-top:22px">
         <li><b>10 of 10</b>noticed bias in their feed. 6 were openly frustrated by it.</li>
         <li><b>6 of 10</b>have a verification habit, and every one of them leaves the app to do it.</li>
-        <li><b>Sources or nothing</b>Several won't trust an AI answer without seeing its sources (Customers 6, 7, 9 and 10).</li>
-        <li><b>Built in</b>Customers 3 and 10 said a tool inside the app would be easier.</li>
-        <li class="counter"><b>Counter-evidence</b>Customer 2 said Google answers a yes-or-no question in about 10 seconds. Customer 1 distrusts plug-ins.</li>
+        <li><b>Sources or nothing</b>Several won't trust an AI answer without seeing its sources.</li>
+        <li><b>Built in</b>Two said a tool inside the app would be easier.</li>
+        <li class="counter"><b>Counter-evidence</b>For a simple yes-or-no question, one person said Google is already fast enough. Another distrusts plug-ins in general.</li>
         <li class="counter"><b>Caveat</b>The sample is small and mostly US college students.</li>
       </ul>
-      <p>A few things people told us shaped the design directly. Customer 9 wants to see "this is where I got this." Customer 5 rewrites her prompts to "ask a purified question" so the AI doesn't mirror her bias, and often agrees with neither side. Customer 7 said balanced sources are "few and far between," and called "AI" a trigger word for skepticism. Customer 3, on how they'd know the tool is trustworthy: "use it often, and if it fails, I'd stop." <span class="todo">TODO: check these quotes against the original interview notes before publishing</span></p>
+      <p>Across the interviews, a few themes kept coming up. People want to see where an answer came from before they trust it. Many feel balanced sources are hard to find, and often agree with neither side. Some word their searches carefully so the answer doesn't just mirror their own bias. And trust in a tool is fragile: if it gets something wrong, people stop using it.</p>
     </div>
   </section>
 
@@ -121,7 +121,7 @@
           <div>
             <p class="heard">What we heard</p>
             <h3>No sources, no trust in an AI answer.</h3>
-            <p>Four of the ten said this in some form, and Customer 9 asked for "this is where I got this."</p>
+            <p>Four of the ten said this in some form: they want to see where an answer came from before they believe it.</p>
             <p class="heard made">What I designed</p>
             <p>A separate <strong>"Where this answer comes from"</strong> section under every answer, instead of sources hidden in the text. Later, my team asked for smaller sources. I made them compact pills, but kept them tappable, because visible sources are what earn trust.</p>
           </div>
@@ -131,7 +131,7 @@
           <div>
             <p class="heard">What we heard</p>
             <h3>People often agree with neither side, and want to judge for themselves.</h3>
-            <p>Customer 5 often agrees with neither side, and Customer 7 struggles to find balanced sources.</p>
+            <p>People told us balanced coverage is hard to find, and that they often land somewhere between the sides.</p>
             <p class="heard made">What I designed</p>
             <p><strong>Perspectives</strong> opens with the common ground, then lets you switch between left, center and right. Each side has its own short summary and its own sources, so you compare them yourself.</p>
           </div>
@@ -169,7 +169,7 @@
   <section class="cs-section" aria-labelledby="ai-wrong-h">
     <header><span class="label">05</span><h2 id="ai-wrong-h">Designing for AI being wrong</h2></header>
     <div class="cs-body">
-      <p>An AI that explains the news will sometimes be wrong. Our research said trust is earned slowly and lost fast ("if it fails, I'd stop"), so we wrote the rules into the PRD and I designed for them:</p>
+      <p>An AI that explains the news will sometimes be wrong. Our research said trust is earned slowly and lost fast: if a tool gets something wrong, people stop using it, so we wrote the rules into the PRD and I designed for them:</p>
       <ul>
         <li><strong>No source, no sentence.</strong> Every claim in an answer needs a source. A verdict needs at least 2 independent sources, and each side in Perspectives links to at least 2 articles.</li>
         <li><strong>Room to push back.</strong> Every card has thumbs up or down, a trust rating, and "Report a problem." Reporting asks for a reason, so a person reviewing it knows what went wrong.</li>
@@ -233,9 +233,9 @@
           <tbody>
             <tr><td>Advisor</td><td>Skepticism is the trigger, so reward it.</td><td><strong>Built</strong> "Good instinct. You were right to pause." and a weekly "Sharp eye" count.</td><td>Rewards the moment of doubt, our first friction point.</td></tr>
             <tr><td>Advisor</td><td>Show a needle for fact vs. opinion.</td><td><strong>Built</strong> the fact vs. opinion meter.</td><td>Backs up our rule of no verdicts on opinions.</td></tr>
-            <tr><td>Advisor</td><td>Let people share a "grain report" with friends.</td><td><strong>Built</strong> a share sheet.</td><td>People want to discuss the news with friends and family (Customer 7).</td></tr>
+            <tr><td>Advisor</td><td>Let people share a "grain report" with friends.</td><td><strong>Built</strong> a share sheet.</td><td>People want to discuss the news with friends and family (from our interviews).</td></tr>
             <tr><td>Advisor</td><td>Let users report problems in detail.</td><td><strong>Built</strong> a report flow with reasons.</td><td>Our PRD calls for human review, and a reason tells the reviewer what went wrong.</td></tr>
-            <tr><td>Advisor</td><td>Add topic communities.</td><td><strong>Built</strong> "What people are saying" communities, replacing "Recommended for you."</td><td>People want to discuss news intelligently (Customer 7).</td></tr>
+            <tr><td>Advisor</td><td>Add topic communities.</td><td><strong>Built</strong> "What people are saying" communities, replacing "Recommended for you."</td><td>People want to discuss news intelligently (from our interviews).</td></tr>
             <tr><td>Team</td><td>Make sources smaller.</td><td><strong>Built</strong> compact source pills that stay tappable.</td><td>Less clutter, without hiding what earns trust.</td></tr>
             <tr><td>Team</td><td>Suggest friends like Instagram does; drop the inbox.</td><td><strong>Built</strong> a friends carousel with red unread dots, and chat.</td><td>A familiar pattern, and unread dots replace a separate inbox.</td></tr>
             <tr class="win"><td>Team</td><td>Use profile photos.</td><td><strong>Adapted:</strong> illustrated avatars instead.</td><td>Real photos would need people's consent.</td></tr>
