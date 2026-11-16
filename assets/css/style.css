@@ -666,3 +666,9 @@ html.brewing, html.brewing body { overflow: hidden; }
 @media (min-width: 700px) { .pair.crop { grid-template-columns: minmax(0, 1fr) 330px; } }
 @media (min-width: 700px) { .pair.text-only { grid-template-columns: minmax(0, 1fr); max-width: 68ch; } }
 @media (min-width: 700px) { .pair.tall { grid-template-columns: minmax(0, 1fr) 280px; } }
+/* project card quick facts for skimming */
+.card-facts { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 14px; margin: 2px 0 0; padding: 12px 0 2px; border-top: 1.5px dotted var(--line); font-size: .92rem; line-height: 1.45; }
+.card-facts dt { font-family: var(--f-mono); font-size: .68rem; letter-spacing: .07em; text-transform: uppercase; color: var(--crema); padding-top: 3px; white-space: nowrap; }
+.card-facts dd { margin: 0; }
+@media (max-width: 420px) { .card-facts { grid-template-columns: 1fr; gap: 2px; } .card-facts dd { margin-bottom: 8px; } }
+.menu-intro { max-width: 54ch; color: var(--muted); line-height: 1.55; }
