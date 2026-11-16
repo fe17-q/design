@@ -659,3 +659,8 @@ html.brewing, html.brewing body { overflow: hidden; }
 .findings b { display: block; font-family: var(--f-display); font-size: var(--step-1); color: var(--crema); font-weight: 500; line-height: 1.1; margin-bottom: 4px; }
 .findings li.counter { border-style: dashed; }
 .ticket .t-total strong { text-align: right; }
+.shot.g-phone, .trio .shot.g-phone, .duo .shot.g-phone { aspect-ratio: 9 / 20; border-radius: 14px; background: #000; }
+.shot.g-phone img { object-fit: cover; }
+@media (max-width: 639px) { figure:has(.shot.g-phone) { max-width: 240px; margin-inline: auto; width: 100%; } }
+.pair .shot:not(.placeholder):not(.g-phone) { border-radius: 10px; background: #000; }
+@media (min-width: 700px) { .pair.crop { grid-template-columns: minmax(0, 1fr) 330px; } }
