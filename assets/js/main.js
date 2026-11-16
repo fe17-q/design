@@ -46,8 +46,7 @@
   syncThemeButtons();
 
   /* ---------- Analytics (GoatCounter: free, no cookies) ----------
-     Page views are counted automatically. Events: which drink was ordered, whether the brewing was skipped,
-     and whether "Behind the counter" was turned on. Off unless <meta name="goatcounter"> has a site code. */
+     Page views are counted automatically. Events: which drink was ordered and whether the brewing was skipped. Off unless <meta name="goatcounter"> has a site code. */
   var gcMeta = document.querySelector('meta[name="goatcounter"]');
   var gcCode = gcMeta && gcMeta.getAttribute("content").trim();
   if (gcCode && /^[a-z0-9-]+$/i.test(gcCode) && !/^(localhost|127\.|file)/.test(location.hostname || "file")) {
@@ -62,22 +61,6 @@
       if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: name, title: title || name, event: true });
     } catch (e) { /* analytics must never break the site */ }
   }
-
-  /* ---------- Behind the counter: design notes shown in place ---------- */
-  function setCounter(on) {
-    root.classList.toggle("counter-on", on);
-    document.querySelectorAll(".counter-note").forEach(function (n) { n.hidden = !on; });
-    document.querySelectorAll("[data-counter]").forEach(function (b) { b.setAttribute("aria-pressed", String(on)); });
-  }
-  setCounter(store("fq-counter") === "on");
-  document.querySelectorAll("[data-counter]").forEach(function (b) {
-    b.addEventListener("click", function () {
-      var on = !root.classList.contains("counter-on");
-      setCounter(on);
-      store("fq-counter", on ? "on" : "off");
-      if (on) logEvent("behind-the-counter-on", "Behind the counter: on");
-    });
-  });
 
   /* ---------- The menu ----------
      Each section is a drink. `glass` is the side-view recipe, bottom to top, as fractions of the glass:

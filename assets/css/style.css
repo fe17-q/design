@@ -548,42 +548,12 @@ html.brewing, html.brewing body { overflow: hidden; }
 @keyframes swap-in { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .order-view.swap { animation: none; } }
 
-/* =========================================================
-   Behind the counter: design notes shown in place
-   ========================================================= */
+/* toolbar wrapper for the theme switch */
 .bar-tools { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
-.counter-switch {
-  display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
-  border: 1.5px solid var(--line); border-radius: 999px; background: none; color: var(--muted);
-  padding: 7px 12px; font-family: var(--f-mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase;
-}
-.counter-switch::before {
-  content: ""; width: 22px; height: 12px; border-radius: 999px; flex: none;
-  background: var(--line); box-shadow: inset 2px 0 0 2px var(--line), inset 12px 0 0 0 var(--paper);
-  transition: box-shadow .2s ease, background .2s ease;
-}
-.counter-switch:hover { color: var(--ink); border-color: var(--ink); }
-.counter-switch[aria-pressed="true"] { color: var(--ink); border-color: var(--crema); }
-.counter-switch[aria-pressed="true"]::before { background: var(--crema); box-shadow: inset -12px 0 0 0 var(--crema), inset -2px 0 0 2px var(--crema), inset 0 0 0 10px var(--paper); }
-@media (prefers-reduced-motion: reduce) { .counter-switch::before { transition: none; } }
 
-.counter-note {
-  position: relative; border: 1.5px dashed var(--crema); border-radius: 4px; background: var(--card);
-  padding: 12px 14px 13px; font-size: .88rem; line-height: 1.5; color: var(--ink); max-width: 64ch;
-}
-.counter-note b {
-  display: block; margin-bottom: 4px; font-family: var(--f-mono); font-weight: 500; font-size: .68rem;
-  letter-spacing: .08em; text-transform: uppercase; color: var(--crema);
-}
-.counter-note code { font-family: var(--f-mono); font-size: .82em; }
-.board-card .counter-note, .menu-wrap > .counter-note { margin-top: 0; }
-.ready .counter-note { margin-top: 14px; }
-.brew-note { position: absolute; left: 50%; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); width: min(520px, calc(100% - 32px)); z-index: 2; }
 
 .proj-group { margin: 8px 0 18px; color: var(--crema); }
 .proj-group ~ .proj-group { margin-top: 48px; }
-.pane .counter-note + .feature, .proj-group + .counter-note { margin-top: 0; }
-.proj-group + .counter-note { margin-bottom: 18px; }
 
 .sw-short { display: none; }
 @media (max-width: 520px) {
@@ -592,7 +562,6 @@ html.brewing, html.brewing body { overflow: hidden; }
   .order-bar .sw-long { display: none; }
   .order-bar .sw-short { display: inline; }
   .change-order { padding: 7px 11px; font-size: .72rem; }
-  .counter-switch { padding: 7px 10px; gap: 6px; }
   .order-bar .theme-switch button { padding: 5px 8px; }
 }
 
