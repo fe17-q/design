@@ -641,3 +641,57 @@ html.brewing, html.brewing body { overflow: hidden; }
 .card-facts dd { margin: 0; }
 @media (max-width: 420px) { .card-facts { grid-template-columns: 1fr; gap: 2px; } .card-facts dd { margin-bottom: 8px; } }
 .menu-intro { max-width: 54ch; color: var(--muted); line-height: 1.55; }
+
+/* =========================================================
+   Floating café doodles around the menu board
+   ========================================================= */
+.menu-view { overflow-x: clip; }
+.menu-stage { position: relative; }
+.menu-stage .board-card { position: relative; z-index: 1; }
+/* floating doodles around the menu */
+.doodles { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.doodle { position: absolute; fill: none; stroke: var(--crema); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; opacity: .8; animation: bob 6s ease-in-out infinite; }
+.doodle circle[r="1.6"] { fill: var(--crema); stroke: none; }
+.d-mug { width: 78px; top: -34px; right: -96px; animation-delay: -1s; }
+.d-croissant { width: 92px; top: 34%; left: -116px; animation-delay: -3s; }
+.d-runner { width: 74px; bottom: 6%; right: -100px; animation: none; }
+.d-muffin { width: 64px; bottom: -30px; left: -82px; animation-delay: -2s; }
+.d-beans { width: 52px; top: -22px; left: -64px; animation-delay: -4s; }
+.d-donut { width: 60px; top: 46%; right: -84px; animation-delay: -5s; }
+.d-croissant .soft { fill: color-mix(in srgb, var(--crema) 18%, var(--paper)); }
+.d-croissant .flake { stroke-width: 1.6; opacity: .7; }
+.d-mug .mug-body { fill: var(--crema); fill-opacity: .1; }
+
+/* steam rises out of the mug: each wisp is drawn from the rim upward, then fades */
+.wisp { stroke-dasharray: .38 3; stroke-dashoffset: .38; animation: wisp 2.8s cubic-bezier(.4, 0, .6, 1) infinite; }
+.wisp.w2 { animation-delay: .9s; } .wisp.w3 { animation-delay: 1.8s; }
+@keyframes wisp {
+  0% { stroke-dashoffset: .38; opacity: 0; }
+  15% { opacity: .95; }
+  70% { opacity: .7; }
+  100% { stroke-dashoffset: -1; opacity: 0; }
+}
+
+/* the runner: arms and legs swing in opposite pairs, body bounces twice per stride */
+.d-runner .limb { transform-box: view-box; }
+.d-runner .leg-f, .d-runner .leg-b { transform-origin: 38px 46px; animation: stride .7s ease-in-out infinite; }
+.d-runner .arm-f, .d-runner .arm-b { transform-origin: 43px 26px; animation: swing .7s ease-in-out infinite; }
+.d-runner .leg-b, .d-runner .arm-f { animation-delay: -.35s; }
+.d-runner .leg-b path, .d-runner .arm-b path { opacity: .55; }
+.d-runner .r-body { animation: stride-bob .35s ease-in-out infinite; }
+.d-runner .speed { animation: whoosh .7s linear infinite; }
+@keyframes bob { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-10px) rotate(3deg); } }
+@keyframes stride { 0%, 100% { transform: rotate(38deg); } 50% { transform: rotate(-42deg); } }
+@keyframes swing { 0%, 100% { transform: rotate(-55deg); } 50% { transform: rotate(50deg); } }
+@keyframes stride-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@keyframes whoosh { 0% { transform: translateX(6px); opacity: 0; } 30% { opacity: .7; } 100% { transform: translateX(-8px); opacity: 0; } }
+/* narrower screens: fewer, smaller doodles that peek in at the edges */
+@media (max-width: 1060px) {
+  .d-croissant, .d-donut { display: none; }
+  .d-mug { width: 58px; top: -46px; right: 6px; }
+  .d-beans { width: 40px; top: -36px; left: 4px; }
+  .d-runner { width: 54px; bottom: -44px; right: 10px; }
+  .d-muffin { width: 46px; bottom: -40px; left: 8px; }
+  .menu-stage { margin-block: 40px 40px; }
+}
+@media (prefers-reduced-motion: reduce) { .doodle, .doodle * { animation: none !important; } .wisp { stroke-dasharray: none; opacity: .7; } }
