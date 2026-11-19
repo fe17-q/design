@@ -445,6 +445,9 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .art-row figcaption { font-family: var(--f-mono); font-size: .7rem; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); text-align: center; margin-top: 8px; }
 .miles .mi-pace { font-size: .95rem; }
 .art-row .twist { display: block; margin-top: 4px; color: var(--crema); text-transform: none; letter-spacing: 0; font-size: .72rem; }
+.art-row.stage .shot { aspect-ratio: 4 / 3; border-radius: 12px; }
+/* phone: a swipeable row instead of three tiny photos */
+@media (max-width: 480px) { .art-row.stage { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; } .art-row.stage figure { scroll-snap-align: start; } }
 .miles { list-style: none; margin: 6px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; position: relative; }
 .miles li { border: 1.5px solid var(--line); border-radius: 3px; padding: 14px 14px 16px; display: grid; gap: 4px; position: relative; }
 .miles li.done { border-color: var(--crema); }
